@@ -1,0 +1,9 @@
+.DropdownMenu {
+  background-color: #233b56;
+}
+
+@media (min-width: 800px) {
+  .DropdownMenu {
+    display: none;
+  }
+}

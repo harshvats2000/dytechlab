@@ -1,0 +1,19 @@
+.AboutCards {
+  display: flex;
+  flex-direction: column;
+  padding: 3.75rem 0;
+}
+@media (min-width: 600px) {
+  .AboutCards {
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 5.625rem 0 3.75rem 0;
+  }
+}
+@media (min-width: 1200px) {
+  .AboutCards {
+    flex-wrap: nowrap;
+    max-width: 1200px;
+  }
+}

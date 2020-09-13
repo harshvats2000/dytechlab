@@ -1,0 +1,58 @@
+.Footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #233b56;
+  padding: 80px 10px;
+}
+
+.FooterContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.Disclaimer {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.2);
+  margin-right: 0.5em;
+  line-height: 1.9;
+}
+@media (min-width: 600px) {
+  .Disclaimer {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.BottomItems {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.LegalNav {
+  font-size: 0.8125rem;
+}
+@media (min-width: 600px) {
+  .LegalNav {
+    display: inline-block;
+    vertical-align: baseline;
+  }
+}
+
+.LegalNav a {
+  color: rgba(255, 255, 255, 0.2);
+  margin-right: 0.5em;
+}
+a {
+  text-decoration: none;
+  position: relative;
+  color: #00d4c1;
+  text-decoration: none;
+}
+a {
+  background-color: transparent;
+}
+
+.SocialLogo {
+  position: absolute;
+}
