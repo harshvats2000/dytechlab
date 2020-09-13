@@ -1,0 +1,38 @@
+.Toolbar {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 20px 6%;
+}
+
+@media (min-width: 800px) {
+  .Toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0px 15%;
+    padding-top: 25px;
+  }
+}
+
+@media (min-width: 960px) {
+  .Toolbar {
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 12%;
+  }
+}
+
+.DesktopOnly {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .DesktopOnly {
+    display: block;
+  }
+  .MobileOnly {
+    display: none;
+  }
+}
