@@ -1,34 +1,48 @@
 import React, { Component } from "react";
 import classes from "./AboutCards.module.css";
 import AboutCard from "../AboutCard/AboutCard.js";
-import TradingLogo from "../Logo/TradingLogo.js";
 
 class AboutCards extends Component {
-  state = {
-    animate: false,
-  };
-
-  showAnimateHandler = () => {
-    this.setState({
-      animate: true,
-    });
-  };
-  hideAnimateHandler = () => {
-    this.setState({
-      animate: false,
-    });
-  };
+  componentDidMount() {
+    const animateSVG = () => {
+      var path = document.querySelector("path");
+      var length = path.getTotalLength();
+      // Clear any previous transition
+      path.style.transition = path.style.WebkitTransition = "none";
+      // Set up the starting positions
+      path.style.strokeDasharray = length + " " + length;
+      path.style.strokeDashoffset = length;
+      // Trigger a layout so styles are calculated & the browser
+      // picks up the starting position before animating
+      path.getBoundingClientRect();
+      // Define our transition
+      path.style.transition = path.style.WebkitTransition =
+        "stroke-dashoffset 1s ease-in-out";
+      // Go!
+      path.style.strokeDashoffset = "0";
+      console.log("animate-function");
+    };
+    animateSVG();
+  }
 
   render() {
-    console.log(this.state.animate);
     return (
       <div className={classes.AboutCards}>
         <AboutCard
-          mouseEnter={this.showAnimateHandler}
-          mouseLeave={this.hideAnimateHandler}
           heading="Trading and Technology"
           button="Learn More"
-          logo={<TradingLogo animate={this.state.animate} />}
+          logo={
+            <svg height="100px" width="100px">
+              <path
+                stroke="#24a3d8"
+                stroke-width="4.3"
+                fill="none"
+                d="M 0 100 l 25 -25 l 10 10 l 25 -25 h -15 h 17 v 15"
+                stroke-dasharray=""
+                stroke-dashoffset="0.00"
+              />
+            </svg>
+          }
         >
           Our strategies are founded on in-depth research, custom technology and
           careful risk assessment.
@@ -37,12 +51,38 @@ class AboutCards extends Component {
         <AboutCard
           heading="Other ventures"
           button="Learn More"
-          logo={<TradingLogo />}
+          logo={
+            <svg height="100px" width="100px">
+              <path
+                stroke="#24a3d8"
+                stroke-width="4.3"
+                fill="none"
+                d="M 0 100 l 25 -25 l 10 10 l 25 -25 h -15 h 17 v 15"
+                stroke-dasharray=""
+                stroke-dashoffset="0.00"
+              />
+            </svg>
+          }
         >
           As the markets have evolved, so have we, growing to include
           cryptoassets, venture capital and real estate.
         </AboutCard>
-        <AboutCard heading="Careers" button="Learn More" logo={<TradingLogo />}>
+        <AboutCard
+          heading="Careers"
+          button="Learn More"
+          logo={
+            <svg height="100px" width="100px">
+              <path
+                stroke="#24a3d8"
+                stroke-width="4.3"
+                fill="none"
+                d="M 0 100 l 25 -25 l 10 10 l 25 -25 h -15 h 17 v 15"
+                stroke-dasharray=""
+                stroke-dashoffset="0.00"
+              />
+            </svg>
+          }
+        >
           Our people drive our success. We hire the best, provide the right
           tools and reward outstanding results.
         </AboutCard>
