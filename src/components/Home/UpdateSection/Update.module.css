@@ -8,6 +8,7 @@
 }
 
 .Button {
+  text-decoration: none;
   padding: 1.25em 1.5em;
   font-size: 0.6875rem;
   letter-spacing: 0.16em;

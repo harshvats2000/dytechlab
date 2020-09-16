@@ -43,6 +43,7 @@
 
 .Card a {
   position: relative;
+  text-decoration: none;
 }
 
 .Card a::before {
