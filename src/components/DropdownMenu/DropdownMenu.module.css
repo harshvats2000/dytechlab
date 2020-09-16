@@ -2,6 +2,19 @@
   background-color: #233b56;
 }
 
+.DropdownMenu::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0.5rem;
+  top: 10;
+  right: 5%;
+  transform: rotate(45deg) translateX(-50%);
+  transform-origin: 50% 50%;
+  background-color: inherit;
+}
+
 @media only screen and (min-width: 800px) {
   .DropdownMenu {
     display: none;
