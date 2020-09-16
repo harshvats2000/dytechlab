@@ -9,6 +9,7 @@
   align-items: center;
   height: 100%;
   margin: 10px;
+  margin-left: 0px;
 }
 @media only screen and (min-width: 600px) and (max-width: 800px) {
   .NavigationItem {
@@ -21,7 +22,7 @@
   color: #24a3d8;
   text-decoration: none;
   height: 100%;
-  padding: 16px 10px;
+  padding: 16px 0px;
   box-sizing: border-box;
   display: block;
   transition-property: color;
