@@ -16,11 +16,16 @@ const animtateSVG = () => {
     "stroke-dashoffset 1s ease-in-out";
   // Go!
   path.style.strokeDashoffset = "0";
+  console.log("animate-function");
 };
 
-const logo = () => {
+const logo = (props) => {
+  if (props.animate) {
+    animtateSVG();
+  }
+
   return (
-    <svg height="100px" width="100px" onClick={animtateSVG}>
+    <svg height="100px" width="100px">
       <path
         stroke="#24a3d8"
         stroke-width="4.3"

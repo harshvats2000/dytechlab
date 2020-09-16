@@ -10,7 +10,7 @@
   height: 100%;
   margin: 12px 0px;
 }
-@media (min-width: 600px) {
+@media only screen and (min-width: 600px) {
   .NavigationItem {
     margin: 0 10px;
   }

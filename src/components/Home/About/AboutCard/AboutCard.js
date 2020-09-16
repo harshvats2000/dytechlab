@@ -3,7 +3,7 @@ import classes from "./AboutCard.module.css";
 
 const aboutCard = (props) => {
   return (
-    <div className={classes.AboutCard}>
+    <div className={classes.AboutCard} onMouseEnter={props.mouseEnter} onMouseLeave={props.mouseLeave}>
       {props.logo}
       <h3 className={classes.Heading}>{props.heading}</h3>
       <p className={classes.Body}>{props.children}</p>

@@ -3,7 +3,7 @@
   max-height: 25px;
 }
 
-@media (min-width: 800px) {
+@media only screen and (min-width: 800px) {
   .Logo {
     max-width: 80px;
     max-height: 25px;
