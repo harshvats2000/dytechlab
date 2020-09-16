@@ -12,7 +12,9 @@
 }
 .Content {
   max-width: 1200px;
+  color: #233b56;
   font-size: 1.375rem;
+  font-family: "proxima-nova", sans-serif;
   font-weight: 300;
   margin: 0;
   padding: 0 6%;
