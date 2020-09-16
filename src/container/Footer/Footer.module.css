@@ -1,7 +1,5 @@
 .Root {
   padding: 10% 6%;
-  padding-left: auto;
-  padding-right: auto;
   background-color: #233b56;
 }
 @media (min-width: 600px) {
