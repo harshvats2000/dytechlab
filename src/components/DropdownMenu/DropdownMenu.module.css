@@ -2,7 +2,7 @@
   background-color: #233b56;
 }
 
-@media (min-width: 800px) {
+@media only screen and (min-width: 800px) {
   .DropdownMenu {
     display: none;
   }
