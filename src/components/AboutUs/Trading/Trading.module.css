@@ -1,0 +1,25 @@
+.Root {
+  margin-top: 2.5rem;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #747e88;
+}
+
+@media only screen and (min-width: 600px) {
+  .Root {
+    line-height: 2;
+  }
+}
+
+.Root h4 {
+  margin: 0;
+  font-family: "futura-pt", sans-serif;
+  line-height: 1.4;
+  color: #233b56;
+}
+
+@media only screen and (min-width: 960px) {
+  .Root h4 {
+    font-size: 1.75rem;
+  }
+}

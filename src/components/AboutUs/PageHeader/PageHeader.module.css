@@ -1,0 +1,48 @@
+.Root {
+  display: flex;
+  height: 90vh;
+  padding-top: 65px;
+}
+@media only screen and (min-width: 800px) {
+  .Root {
+    padding-top: 115px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .Root {
+    justify-content: center;
+  }
+}
+
+.CardTitle {
+  align-self: center;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+@media only screen and (min-width: 1220px) {
+  .CardTitle {
+    padding-left: 0;
+    padding-right: 0;
+    width: 1200px;
+  }
+}
+
+.CardTitle h1 {
+  font-size: 32px;
+  font-family: "futura-pt", sans-serif;
+}
+@media only screen and (min-width: 800px) {
+  .CardTitle h1 {
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .CardTitle h1 {
+    font-size: 82px;
+  }
+}
+
+.CardTitle p {
+  line-height: 1.8;
+}
