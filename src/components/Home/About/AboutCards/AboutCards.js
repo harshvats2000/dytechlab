@@ -1,41 +1,20 @@
 import React, { Component } from 'react';
 import classes from './AboutCards.module.css';
 import AboutCard from '../AboutCard/AboutCard.js';
-
-const animateSVG = () => {
-  var path = document.querySelector('.trading-logo');
-  console.log(path);
-  var length = path.getTotalLength();
-  // Clear any previous transition
-  path.style.transition = path.style.WebkitTransition = 'none';
-  // Set up the starting positions
-  path.style.strokeDasharray = length + ' ' + length;
-  path.style.strokeDashoffset = length;
-  // Trigger a layout so styles are calculated & the browser
-  // picks up the starting position before animating
-  path.getBoundingClientRect();
-  // Define our transition
-  path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset 1s ease-in-out';
-  // Go!
-  path.style.strokeDashoffset = '0';
-  console.log('animate-function');
-};
+import { animateSVG } from '../../../../functions/animateSVG';
 
 class AboutCards extends Component {
-  componentDidMount() {
-    animateSVG();
-  }
-
   render() {
     return (
       <div className={classes.AboutCards}>
         <AboutCard
-          heading='Trading and Technology'
+          heading='Approach'
           button='Learn More'
-          animate={animateSVG}
+          animate={() => animateSVG('approach-animation', 1)}
           logo={
             <svg height='100px' width='100px'>
               <path
+                id='approach-animation'
                 className='trading-logo'
                 stroke='#24a3d8'
                 strokeWidth='4.3'
@@ -52,7 +31,7 @@ class AboutCards extends Component {
         </AboutCard>
 
         <AboutCard
-          heading='Other ventures'
+          heading='Culture'
           button='Learn More'
           logo={
             <svg height='100px' width='100px'>
