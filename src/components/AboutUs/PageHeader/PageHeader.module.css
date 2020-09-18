@@ -1,10 +1,10 @@
 .Root {
   display: flex;
-  height: 50vh;
-  padding-top: 65px;
+  height: 32vh;
+  margin-top: 65px;
   color: white;
   background-size: cover;
-  background-image: url('/images/about/3.jpeg');
+  background-image: url('/images/about/2.jpeg');
 }
 
 @media only screen and (min-width: 800px) {
