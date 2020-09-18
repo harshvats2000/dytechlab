@@ -23,6 +23,7 @@
     height: 127px;
     width: 260px;
     margin-top: -32px;
+    image-rendering: -webkit-optimize-contrast;
   }
 }
 
