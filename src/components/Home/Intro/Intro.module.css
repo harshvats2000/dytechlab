@@ -12,11 +12,11 @@
 .CardTitle {
   position: absolute;
   left: 20px;
-  bottom: 40px;
+  bottom: 0px;
   width: 90%;
   z-index: 2;
   font-size: 32px;
-  font-family: "futura-pt", sans-serif;
+  font-family: 'futura-pt', sans-serif;
   color: white;
 }
 
@@ -37,7 +37,7 @@
     width: 60%;
     z-index: 2;
     font-size: 40px;
-    font-family: "futura-pt", sans-serif;
+    font-family: 'futura-pt', sans-serif;
     color: white;
   }
 }
@@ -57,13 +57,13 @@
     width: 60%;
     z-index: 2;
     font-size: 82px;
-    font-family: "futura-pt", sans-serif;
+    font-family: 'futura-pt', sans-serif;
     color: white;
   }
 }
 
 .CardMedia::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 4px;
   left: 0;
