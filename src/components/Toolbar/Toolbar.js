@@ -7,7 +7,7 @@ const toolbar = (props) => {
   return (
     <div className={classes.Toolbar}>
       {/* <Logo fill='#233b56' /> */}
-      {/* <img src='/images/logo.jpg' className={classes.logo} /> */}
+      <img src='/images/logo.jpg' className={classes.logo} />
       <div className={classes.DesktopOnly}>
         <NavigationItems />
       </div>
