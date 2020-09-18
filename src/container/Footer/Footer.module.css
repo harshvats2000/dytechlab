@@ -1,6 +1,6 @@
 .Root {
   padding: 10% 6%;
-  background-color: #233b56;
+  background-color: var(--s-color);
 }
 @media only screen and (min-width: 600px) {
   .Root {

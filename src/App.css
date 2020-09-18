@@ -2,3 +2,20 @@
   margin: 0;
   padding: 0;
 }
+
+:root {
+  --p-color: #24a3d8;
+  --s-color: #233b56;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
