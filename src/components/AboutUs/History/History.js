@@ -4,7 +4,7 @@ import classes from './History.module.css';
 const History = () => {
   return (
     <div className={classes.Root}>
-      <h4>Our History</h4>
+      <h2 className='heading2'>Our History</h2>
       <p>
         DRW was founded by <a href='/about/don-wilson'>Don Wilson</a>, who got his start
         trading on the floor of the Chicago Mercantile Exchange in the late 1980s.&nbsp; Every

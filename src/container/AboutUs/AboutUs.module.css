@@ -6,11 +6,26 @@
 .Blog {
   padding-left: 6%;
   padding-right: 6%;
+  color: var(--s-color);
 }
 
-@media only screen and (min-width: 1220px) {
+.cards {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.cardText {
+}
+
+.icons {
+  font-size: 100px;
+}
+
+@media only screen and (min-width: 900px) {
   .Blog {
     padding-left: 0;
+    margin: 50px 0 20px 0;
     padding-right: 0;
     width: 1200px;
     align-self: center;

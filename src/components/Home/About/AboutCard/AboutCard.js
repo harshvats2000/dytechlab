@@ -7,7 +7,7 @@ const AboutCard = (props) => {
     <div className={classes.AboutCard} onMouseEnter={animate}>
       {props.logo}
       <h3 className={classes.Heading}>{props.heading}</h3>
-      <p className={classes.Body}>{props.children}</p>
+      <p className='para'>{props.children}</p>
       <a href='/' className={classes.Button}>
         {props.button}
       </a>

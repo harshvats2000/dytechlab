@@ -19,3 +19,26 @@ a {
 img {
   width: 100%;
 }
+
+.para {
+  font-size: 1rem;
+  font-family: 'proxima nove', sans-serif;
+  line-height: 1.5rem;
+}
+
+.heading {
+  text-transform: capitalize;
+  color: var(--p-color);
+}
+
+.sub-heading {
+  text-transform: capitalize;
+  color: var(--p-color);
+}
+
+@media only screen and (min-width: 800px) {
+  .para {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+}

@@ -1,7 +1,19 @@
 .Root {
   display: flex;
-  height: 90vh;
+  height: 100vh;
   padding-top: 65px;
+  color: white;
+  background-size: cover;
+  background-image: url('/images/about/3.jpeg');
+}
+
+.Root::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 @media only screen and (min-width: 800px) {
   .Root {
@@ -29,12 +41,12 @@
 
 .CardTitle h1 {
   font-size: 32px;
-  font-family: "futura-pt", sans-serif;
+  font-family: 'futura-pt', sans-serif;
 }
 @media only screen and (min-width: 800px) {
   .CardTitle h1 {
-    font-size: 40px;
-    margin-bottom: 0;
+    font-size: 50px;
+    margin-bottom: 0px;
   }
 }
 @media only screen and (min-width: 1200px) {
