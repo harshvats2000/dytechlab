@@ -53,6 +53,7 @@
 
 .fun_card > img {
   vertical-align: bottom;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .fun_card_title {
@@ -93,13 +94,48 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 0 25px;
+    gap: 0 5px;
   }
   .fun_heading {
     max-width: 800px;
     font-size: 32px;
   }
   .fun_card {
-    flex: 25%;
+    /* flex: 25%; */
+    height: 600px;
+    overflow: hidden;
+  }
+  .fun_card > img {
+    width: auto;
+    height: 100%;
+    min-width: 100%;
+  }
+  .fun_card1 {
+    flex: 66%;
+  }
+  .fun_card2 {
+    flex: 33%;
+  }
+  .fun_card3 {
+    flex: 33%;
+  }
+  .fun_card4 {
+    flex: 66%;
+  }
+  .fun_card5 {
+    flex: 100%;
+    height: 800px;
+  }
+  .fun_card6 {
+    flex: 66%;
+  }
+  .fun_card7 {
+    flex: 33%;
+  }
+  .fun_card8 {
+    flex: 33%;
+  }
+  .fun_card9 {
+    flex: 66%;
   }
 }
