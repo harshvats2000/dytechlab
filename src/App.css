@@ -23,7 +23,8 @@ img {
 .para {
   font-size: 1rem;
   font-family: 'proxima nove', sans-serif;
-  line-height: 1.5rem;
+  line-height: 1.6rem;
+  font-weight: 100;
 }
 
 .heading {
@@ -38,7 +39,7 @@ img {
 
 @media only screen and (min-width: 800px) {
   .para {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 2rem;
   }
 }

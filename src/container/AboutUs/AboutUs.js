@@ -1,23 +1,31 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import PageHeader from '../../components/AboutUs/PageHeader/PageHeader';
 import classes from './AboutUs.module.css';
+import { p_color } from '../../constants';
 
 class AboutUs extends Component {
   render() {
     return (
-      <div className={classes.Root}>
+      <div className={classes.root}>
         <Header />
-        <PageHeader />
-        <div className={classes.Blog}>
+        <div className={classes.banner}>
+          <img src='/images/about/2.jpeg' className={classes.img} />
+          <div className={classes.bannerTitle}>
+            <h1 style={{ marginBottom: 0 }}>
+              A <span style={{ color: p_color }}>diversified</span> approach
+            </h1>
+            <p style={{ fontSize: '16px', fontWeight: 400 }}>
+              A results-driven team at the intersection of trading + technology
+            </p>
+          </div>
+        </div>
+        <div className={classes.body}>
           <div className={classes.intro}>
             <p className='para'>
               DRW is a diversified trading firm that utilizes our own capital and trades at our
               own risk. We bring sophisticated technology and exceptional people together to
               solve complex problems in markets around the world and across many asset classes.
-              We are motivated to compete at the highest level and unified by a commitment to
-              operate with respect, curiosity and an open mind.
             </p>
           </div>
 
@@ -63,7 +71,7 @@ class AboutUs extends Component {
               <div>
                 <span className={`material-icons ${classes.icons}`}>school</span>
                 <br />
-                <div className={classes.cardText}>Educational Background</div>
+                <div>Educational Background</div>
               </div>
             </div>
           </div>
@@ -79,12 +87,12 @@ class AboutUs extends Component {
               <div>
                 <span className={`material-icons ${classes.icons}`}>school</span>
                 <br />
-                <div className={classes.cardText}>Inhouse System</div>
+                <div>Inhouse System</div>
               </div>
               <div>
                 <span className={`material-icons ${classes.icons}`}>school</span>
                 <br />
-                <div className={classes.cardText}>ACM Winner Team</div>
+                <div>ACM Winner Team</div>
               </div>
               <div>
                 <span className={`material-icons ${classes.icons}`}>school</span>

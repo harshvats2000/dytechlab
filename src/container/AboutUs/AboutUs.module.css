@@ -1,11 +1,26 @@
-.Root {
-  display: flex;
-  flex-direction: column;
+.banner {
+  height: 32vh;
+  width: 100vw;
+  margin-top: 65px;
+  color: white;
+  font-family: 'futura-pt', sans-serif;
+  position: relative;
 }
 
-.Blog {
-  padding-left: 6%;
-  padding-right: 6%;
+.img {
+  height: 100%;
+}
+
+.bannerTitle {
+  left: 20px;
+  top: 20px;
+  padding-right: 5px;
+  position: absolute;
+}
+
+.body {
+  padding-left: 4%;
+  padding-right: 4%;
   color: var(--s-color);
 }
 
@@ -20,18 +35,18 @@
 }
 
 @media only screen and (min-width: 900px) {
-  .Blog {
-    padding-left: 0;
-    margin: 50px 0 20px 0;
-    padding-right: 0;
-    width: 1200px;
-    align-self: center;
+  .body {
+    margin: 50px auto 20px auto;
+    max-width: 1200px;
   }
-}
-
-.Root hr {
-  border: 0;
-  height: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  .banner {
+    height: 90vh;
+    margin-top: 100px;
+  }
+  .bannerTitle {
+    width: 60%;
+    left: 100px;
+    top: 280px;
+    font-size: 2.8rem;
+  }
 }

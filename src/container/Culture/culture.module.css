@@ -1,0 +1,105 @@
+.banner {
+  height: 32vh;
+  width: 100vw;
+  margin-top: 65px;
+  color: white;
+  font-family: 'futura-pt', sans-serif;
+  position: relative;
+}
+
+.bannerTitle {
+  left: 20px;
+  top: 20px;
+  padding-right: 5px;
+  position: absolute;
+}
+
+.img {
+  height: 100%;
+}
+
+.body {
+  padding-left: 4%;
+  padding-right: 4%;
+  color: var(--s-color);
+  font-family: 'futura-pt', sans-serif;
+}
+
+.values {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.value_card {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.icons {
+  font-size: 100px;
+  width: 100px;
+}
+
+.fun_heading {
+  font-size: 28px;
+  line-height: 2.5rem;
+}
+
+.fun_card {
+  border: 1px solid #e3e4e6;
+  margin-bottom: 25px;
+}
+
+.fun_card > img {
+  vertical-align: bottom;
+}
+
+.fun_card_title {
+  padding: 1.25rem;
+  font-family: 'proxima-nova', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #919daa;
+}
+
+@media only screen and (min-width: 900px) {
+  .body {
+    margin: 50px auto 20px auto;
+    max-width: 1200px;
+  }
+  .banner {
+    height: 90vh;
+    margin-top: 100px;
+  }
+  .bannerTitle {
+    width: 60%;
+    left: 100px;
+    top: 280px;
+    font-size: 2.8rem;
+  }
+  .values {
+    flex-direction: row;
+  }
+  .value_card {
+    flex: 50%;
+  }
+  .para {
+    max-width: 300px;
+  }
+  .fun {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0 25px;
+  }
+  .fun_heading {
+    max-width: 800px;
+    font-size: 32px;
+  }
+  .fun_card {
+    flex: 25%;
+  }
+}
