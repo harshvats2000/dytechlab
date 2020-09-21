@@ -28,58 +28,59 @@ export default function Culture() {
         />
 
         <div className={classes.body}>
-          <div>
+          <div className={classes.values}>
             <h1 className='heading'>Our Values</h1>
-            <div className={classes.values}>
-              <div className={classes.value_card}>
-                {/* <span className={`material-icons ${classes.icons}`}>group_work</span> */}
-                <img className={classes.icons} src='/images/culture/teamwork.png' />
-                <br />
-                <h3 className='heading'>Teamwork</h3>
-                <p className={`para ${classes.para}`}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique reiciendis
-                  dolore assumenda iusto molestias iure!
-                </p>
+            <div className={classes.cards}>
+              <div className={classes.card}>
+                <span className={`material-icons ${classes.icons}`}>school</span>
+                <div className={classes.card_body}>
+                  <h4>Teamwork</h4>
+                  <p className='para'>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, tenetur.
+                  </p>
+                </div>
               </div>
-              <div className={classes.value_card}>
-                {/* <span className={`material-icons ${classes.icons}`}>school</span> */}
-                <img className={classes.icons} src='/images/culture/meritocracy.jpg' />
-                <br />
-                <h3 className='heading'>Meritocracy</h3>
-                <p className={`para ${classes.para}`}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique reiciendis
-                  dolore assumenda iusto molestias iure!
-                </p>
+
+              <div className={classes.card}>
+                <span className={`material-icons ${classes.icons}`}>school</span>
+                <div className={classes.card_body}>
+                  <h4>Meritocracy</h4>
+                  <p className='para'>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, tenetur.
+                  </p>
+                </div>
               </div>
-              <div className={classes.value_card}>
-                {/* <span className={`material-icons ${classes.icons}`}>admin_panel_settings</span> */}
-                <img className={classes.icons} src='/images/culture/integrity.png' />
-                <br />
-                <h3 className='heading'>Integrity</h3>
-                <p className={`para ${classes.para}`}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique reiciendis
-                  dolore assumenda iusto molestias iure!
-                </p>
+
+              <div className={classes.card}>
+                <span className={`material-icons ${classes.icons}`}>school</span>
+                <div className={classes.card_body}>
+                  <h4>Integrity</h4>
+                  <p className='para'>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, tenetur.
+                  </p>
+                </div>
               </div>
-              <div className={classes.value_card}>
-                {/* <span className={`material-icons ${classes.icons}`}>import_contacts</span> */}
-                <img className={classes.icons} src='/images/culture/learning.png' />
-                <br />
-                <h3 className='heading'>Learning</h3>
-                <p className={`para ${classes.para}`}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique reiciendis
-                  dolore assumenda iusto molestias iure!
-                </p>
+            </div>
+
+            <div className={classes.cards}>
+              <div className={classes.card}>
+                <span className={`material-icons ${classes.icons}`}>school</span>
+                <div className={classes.card_body}>
+                  <h4>Learning</h4>
+                  <p className='para'>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, tenetur.
+                  </p>
+                </div>
               </div>
-              <div className={classes.value_card}>
-                {/* <span className={`material-icons ${classes.icons}`}>school</span> */}
-                <img className={classes.icons} src='/images/culture/agility.png' />
-                <br />
-                <h3 className='heading'>Agility</h3>
-                <p className={`para ${classes.para}`}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique reiciendis
-                  dolore assumenda iusto molestias iure!
-                </p>
+
+              <div className={classes.card}>
+                <span className={`material-icons ${classes.icons}`}>school</span>
+                <div className={classes.card_body}>
+                  <h4>Agility</h4>
+                  <p className='para'>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, tenetur.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
