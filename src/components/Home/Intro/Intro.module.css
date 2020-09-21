@@ -1,14 +1,15 @@
-.CardMedia {
+.banner {
   margin-top: 65px;
   position: relative;
   width: 100vw;
+  height: 50vh;
 }
 
 .video {
   object-fit: cover;
 }
 
-.CardTitle {
+.bannerTitle {
   position: absolute;
   left: 20px;
   bottom: 0px;
@@ -19,10 +20,10 @@
   color: white;
 }
 
-.CardMedia::after {
+.banner::after {
   content: '';
   position: absolute;
-  bottom: 4px;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -30,17 +31,17 @@
 }
 
 @media only screen and (min-width: 900px) {
-  .CardMedia {
+  .banner {
     margin-top: 100px;
     height: 90vh;
   }
-  .CardTitle {
+  .bannerTitle {
     left: 100px;
     bottom: 100px;
     width: 60%;
     font-size: 5rem;
   }
-  .CardMedia::after {
+  .banner::after {
     content: '';
     position: absolute;
     bottom: 0px;

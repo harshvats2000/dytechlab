@@ -12,7 +12,7 @@
   width: 100px;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 900px) {
   .Toolbar {
     align-items: flex-start;
     flex-direction: column;
@@ -27,7 +27,7 @@
   }
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 900px) {
   .Toolbar {
     flex-direction: row;
     align-items: center;
@@ -39,7 +39,7 @@
   display: none;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 900px) {
   .DesktopOnly {
     display: block;
   }

@@ -1,15 +1,14 @@
 import React, { useEffect } from 'react';
 import classes from './AboutCard.module.css';
 
-const AboutCard = (props) => {
-  const { animate } = props;
+const AboutCard = ({ text, heading, logo, animate }) => {
   return (
     <div className={classes.AboutCard} onMouseEnter={animate}>
-      {props.logo}
-      <h3 className={classes.Heading}>{props.heading}</h3>
-      <p className='para'>{props.children}</p>
+      {logo}
+      <h3 className={classes.Heading}>{heading}</h3>
+      <p className='para'>{text}</p>
       <a href='/' className={classes.Button}>
-        {props.button}
+        Learn More
       </a>
     </div>
   );

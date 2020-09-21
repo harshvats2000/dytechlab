@@ -2,12 +2,14 @@ import React from 'react';
 import classes from './Toolbar.module.css';
 import NavigationItems from '../Navigation/NavigationItems/NavigationItems';
 import MenuToggle from '../DropdownMenu/MenuToggle/MenuToggle';
+import { Link } from 'react-router-dom';
 
 const toolbar = (props) => {
   return (
     <div className={classes.Toolbar}>
-      {/* <Logo fill='#233b56' /> */}
-      <img src='/images/logo.jpg' className={classes.logo} />
+      <Link to='/'>
+        <img src='/images/logo.jpg' className={classes.logo} />
+      </Link>
       <div className={classes.DesktopOnly}>
         <NavigationItems />
       </div>

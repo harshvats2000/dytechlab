@@ -21,10 +21,11 @@ img {
 }
 
 .para {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: 'proxima nove', sans-serif;
-  line-height: 1.6rem;
+  line-height: 2rem;
   font-weight: 100;
+  text-align: left;
 }
 
 .heading {
@@ -35,11 +36,4 @@ img {
 .sub-heading {
   text-transform: capitalize;
   color: var(--p-color);
-}
-
-@media only screen and (min-width: 800px) {
-  .para {
-    font-size: 1.1rem;
-    line-height: 2rem;
-  }
 }

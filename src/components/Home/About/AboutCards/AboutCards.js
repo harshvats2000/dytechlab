@@ -9,7 +9,8 @@ class AboutCards extends Component {
       <div className={classes.AboutCards}>
         <AboutCard
           heading='Approach'
-          button='Learn More'
+          text='Our strategies are founded on in-depth research, custom technology and careful risk
+          assessment.'
           animate={() => animateSVG('approach-animation', 1)}
           logo={
             <svg height='100px' width='100px'>
@@ -25,14 +26,12 @@ class AboutCards extends Component {
               />
             </svg>
           }
-        >
-          Our strategies are founded on in-depth research, custom technology and careful risk
-          assessment.
-        </AboutCard>
+        />
 
         <AboutCard
           heading='Culture'
-          button='Learn More'
+          text='As the markets have evolved, so have we, growing to include cryptoassets, venture
+          capital and real estate.'
           logo={
             <svg height='100px' width='100px'>
               <path
@@ -45,13 +44,11 @@ class AboutCards extends Component {
               />
             </svg>
           }
-        >
-          As the markets have evolved, so have we, growing to include cryptoassets, venture
-          capital and real estate.
-        </AboutCard>
+        />
         <AboutCard
           heading='Careers'
-          button='Learn More'
+          text='Our people drive our success. We hire the best, provide the right tools and reward
+          outstanding results.'
           logo={
             <svg height='100px' width='100px'>
               <path
@@ -64,10 +61,7 @@ class AboutCards extends Component {
               />
             </svg>
           }
-        >
-          Our people drive our success. We hire the best, provide the right tools and reward
-          outstanding results.
-        </AboutCard>
+        />
       </div>
     );
   }

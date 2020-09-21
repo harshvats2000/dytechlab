@@ -3,32 +3,31 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import classes from './AboutUs.module.css';
 import { p_color } from '../../constants';
+import OpeningText from '../../components/OpeningText';
 
 class AboutUs extends Component {
   render() {
     return (
       <div className={classes.root}>
         <Header />
+
         <div className={classes.banner}>
           <img src='/images/about/2.jpeg' className={classes.img} />
-          <div className={classes.bannerTitle}>
-            <h1 style={{ marginBottom: 0 }}>
-              A <span style={{ color: p_color }}>diversified</span> approach
-            </h1>
+          <h1 className={classes.bannerTitle}>
+            Where <span style={{ color: p_color }}>experience</span> <span>meets</span>{' '}
+            innovation
             <p style={{ fontSize: '16px', fontWeight: 400 }}>
               A results-driven team at the intersection of trading + technology
             </p>
-          </div>
+          </h1>
         </div>
-        <div className={classes.body}>
-          <div className={classes.intro}>
-            <p className='para'>
-              DRW is a diversified trading firm that utilizes our own capital and trades at our
-              own risk. We bring sophisticated technology and exceptional people together to
-              solve complex problems in markets around the world and across many asset classes.
-            </p>
-          </div>
 
+        <OpeningText
+          text='We empower a team of exceptional individuals to identify and capture trading and
+          investment opportunities globally.'
+        />
+
+        <div className={classes.body}>
           <div className={classes.history}>
             <h1 className='heading'>Our history</h1>
             <p className='para'>
@@ -51,58 +50,83 @@ class AboutUs extends Component {
               of technology work together to create liquidity, improve market efficiency and
               capture opportunities.
             </p>
-            <img src='/images/about/2.jpeg' />
           </div>
 
           <div className={classes.people}>
-            <h2 className='sub-heading'>1. People</h2>
+            <h2 className='sub-heading'>People</h2>
             <p className='para'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae tellus
               rutrum leo commodo tempor. Nulla sollicitudin justo sit amet erat consequat, sit
               amet malesuada lacus vehicula. Fusce ullamcorper ultricies nulla, id gravida
               lectus lacinia tempor. Praesent consectetur viverra lacus id facilisis.
             </p>
+
             <div className={classes.cards}>
-              <div>
+              <div className={classes.card}>
                 <span className={`material-icons ${classes.icons}`}>school</span>
-                <br />
-                <div>Cultural Background</div>
+                <div className={classes.card_body}>
+                  <h4>Cultural Background</h4>
+                  <p className='para'>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, tenetur.
+                  </p>
+                </div>
               </div>
-              <div>
+
+              <div className={classes.card}>
                 <span className={`material-icons ${classes.icons}`}>school</span>
-                <br />
-                <div>Educational Background</div>
+                <div className={classes.card_body}>
+                  <h4>Educational Background</h4>
+                  <p className='para'>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, tenetur.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
+
           <div className={classes.technology}>
-            <h2 className='sub-heading'>2. Technology</h2>
+            <h2 className='sub-heading'>Technology</h2>
             <p className='para'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae tellus
               rutrum leo commodo tempor. Nulla sollicitudin justo sit amet erat consequat, sit
               amet malesuada lacus vehicula. Fusce ullamcorper ultricies nulla, id gravida
               lectus lacinia tempor. Praesent consectetur viverra lacus id facilisis.
             </p>
+
             <div className={classes.cards}>
-              <div>
+              <div className={classes.card}>
                 <span className={`material-icons ${classes.icons}`}>school</span>
-                <br />
-                <div>Inhouse System</div>
+                <div className={classes.card_body}>
+                  <h4>Inhouse System</h4>
+                  <p className='para'>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, tenetur.
+                  </p>
+                </div>
               </div>
-              <div>
+
+              <div className={classes.card}>
                 <span className={`material-icons ${classes.icons}`}>school</span>
-                <br />
-                <div>ACM Winner Team</div>
+                <div className={classes.card_body}>
+                  <h4>ACM Winner Team</h4>
+                  <p className='para'>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, tenetur.
+                  </p>
+                </div>
               </div>
-              <div>
+
+              <div className={classes.card}>
                 <span className={`material-icons ${classes.icons}`}>school</span>
-                <br />
-                <div className={classes.cardText}>Techniques Used</div>
+                <div className={classes.card_body}>
+                  <h4>Techniques used</h4>
+                  <p className='para'>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, tenetur.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
           <div className={classes.trading}>
-            <h2 className='sub-heading'>3. Trading</h2>
+            <h2 className='sub-heading'>Trading</h2>
             <p className='para'>
               We trade for our own account in major markets across the globe. No outside
               investors. No third party funds. So we can be innovative and nimble, while using

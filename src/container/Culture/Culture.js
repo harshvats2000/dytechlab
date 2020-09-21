@@ -3,33 +3,31 @@ import classes from './culture.module.css';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import { p_color } from '../../constants';
+import OpeningText from '../../components/OpeningText';
 
 export default function Culture() {
   return (
     <>
       <div className={classes.root}>
         <Header />
+
         <div className={classes.banner}>
           <img src='/images/about/2.jpeg' className={classes.img} />
-          <div className={classes.bannerTitle}>
-            <h1 style={{ marginBottom: 0 }}>
-              A <span style={{ color: p_color }}>diversified</span> approach
-            </h1>
+          <h1 className={classes.bannerTitle}>
+            Where <span style={{ color: p_color }}>experience</span> <span>meets</span>{' '}
+            innovation
             <p style={{ fontSize: '16px', fontWeight: 400 }}>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, vitae?
+              A results-driven team at the intersection of trading + technology
             </p>
-          </div>
+          </h1>
         </div>
 
-        <div className={classes.body}>
-          <div className={classes.intro}>
-            {/* <h1 className='heading'>Our Culture</h1> */}
-            <p className={`para`}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt soluta perferendis
-              quas voluptas ad illum non dicta deleniti adipisci tenetur?
-            </p>
-          </div>
+        <OpeningText
+          text='We empower a team of exceptional individuals to identify and capture trading and
+          investment opportunities globally.'
+        />
 
+        <div className={classes.body}>
           <div>
             <h1 className='heading'>Our Values</h1>
             <div className={classes.values}>

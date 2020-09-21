@@ -14,12 +14,10 @@ class Footer extends Component {
           </div>
           <div className={classes.BottomItems}>
             <div className={classes.Disclaimer}>
-              © 2020 DRW Holdings, LLC. All Rights Reserved.
+              © 2020 Dynamic Technology Lab Pte Ltd. All Rights Reserved.
             </div>
             <div className={classes.LegalNav}>
               <a href='/'>Terms of Use</a>
-              <a href='/'>Privacy Notice</a>
-              <a href='/'>California Privacy Notice</a>
             </div>
           </div>
         </div>
