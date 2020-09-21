@@ -102,7 +102,7 @@
   }
   .fun_card {
     /* flex: 25%; */
-    height: 600px;
+    height: 400px;
     overflow: hidden;
   }
   .fun_card > img {
