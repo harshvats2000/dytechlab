@@ -1,0 +1,122 @@
+.banner {
+  margin-top: 65px;
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+}
+
+.img {
+  height: 100%;
+}
+
+.bannerTitle {
+  position: absolute;
+  left: 20px;
+  bottom: 0px;
+  width: 90%;
+  z-index: 2;
+  font-size: 32px;
+  font-family: 'futura-pt', sans-serif;
+  color: white;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.body {
+  padding-left: 4%;
+  padding-right: 4%;
+  color: var(--s-color);
+  font-family: 'futura-pt', sans-serif;
+}
+
+.careers_body {
+  display: flex;
+}
+
+.filter {
+  flex: 4;
+}
+
+.locations {
+  margin-bottom: 60px;
+}
+
+.listing {
+  flex: 8;
+  margin-left: 10px;
+}
+
+.job_card {
+  color: gray;
+  font-size: 0.9rem;
+  margin-bottom: 50px;
+}
+
+.job_location {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 300px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 5px;
+}
+
+.job_department {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 300px;
+  margin-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 5px;
+}
+
+.job_type {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 300px;
+  margin-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 5px;
+}
+
+@media only screen and (min-width: 900px) {
+  .body {
+    margin: 50px auto 20px auto;
+    max-width: 1200px;
+  }
+  .banner {
+    margin-top: 100px;
+    height: 90vh;
+  }
+  .bannerTitle {
+    left: 100px;
+    bottom: 100px;
+    width: 60%;
+    font-size: 5rem;
+  }
+  .banner::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .filter > h4 {
+    font-size: 20px;
+  }
+  .job_card > h3 {
+    font-size: 24px;
+  }
+}

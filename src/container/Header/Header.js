@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import DropdownMenu from "../../components/DropdownMenu/DropdownMenu";
-import Toolbar from "../../components/Toolbar/Toolbar";
-import classes from "./Header.module.css";
+import React, { Component } from 'react';
+import DropdownMenu from '../../components/DropdownMenu/DropdownMenu';
+import Toolbar from '../../components/Toolbar/Toolbar';
+import classes from './Header.module.css';
 
 class Header extends Component {
   state = {
@@ -15,7 +15,6 @@ class Header extends Component {
   };
 
   render() {
-    console.log(this.state.showDropdownMenu);
     return (
       <div className={classes.Header}>
         <Toolbar toggleDropdownMenu={this.showDropdownMenuHandler} />

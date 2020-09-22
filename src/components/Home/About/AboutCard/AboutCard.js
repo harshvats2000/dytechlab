@@ -3,11 +3,11 @@ import classes from './AboutCard.module.css';
 
 const AboutCard = ({ text, heading, logo, animate }) => {
   return (
-    <div className={classes.AboutCard} onMouseEnter={animate}>
+    <div className={classes.aboutCard} onMouseEnter={animate}>
       {logo}
-      <h3 className={classes.Heading}>{heading}</h3>
+      <h3 className={`underline-dark ${classes.heading}`}>{heading}</h3>
       <p className='para'>{text}</p>
-      <a href='/' className={classes.Button}>
+      <a href='/' className={`underline-light ${classes.button}`}>
         Learn More
       </a>
     </div>
