@@ -65,7 +65,7 @@
   justify-content: flex-start;
   max-width: 300px;
   margin-bottom: 8px;
-  border-bottom: 1px solid gainsboro;
+  /* border-bottom: 1px solid gainsboro; */
   padding-bottom: 5px;
 }
 
@@ -75,7 +75,7 @@
   max-width: 300px;
   margin-bottom: 8px;
   margin-bottom: 8px;
-  border-bottom: 1px solid gainsboro;
+  /* border-bottom: 1px solid gainsboro; */
   padding-bottom: 5px;
 }
 
@@ -85,7 +85,7 @@
   max-width: 300px;
   margin-bottom: 8px;
   margin-bottom: 8px;
-  border-bottom: 1px solid gainsboro;
+  /* border-bottom: 1px solid gainsboro; */
   padding-bottom: 5px;
 }
 
