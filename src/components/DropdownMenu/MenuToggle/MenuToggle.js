@@ -1,7 +1,7 @@
-import React from "react";
-import classes from "./MenuToggle.module.css";
+import React from 'react';
+import classes from './MenuToggle.module.css';
 
-const menuToggle = (props) => {
+const menuToggle = () => {
   return (
     <div className={classes.MenuToggle}>
       <div></div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classes from './Footer.module.css';
-import FooterNavigationItems from '../../components/FooterNav/NavigationItems/NavigationItems';
+import NavigationItem from './NavigationItem';
 
 class Footer extends Component {
   render() {
@@ -8,12 +8,16 @@ class Footer extends Component {
       <div className={classes.Root}>
         <div className={classes.Footer}>
           <div className={classes.CenterItems}>
-            {/* <DrwLogo fill='white' /> */}
-            {/* <img src='/images/logo.jpg' /> */}
-            <FooterNavigationItems />
+            <ul className={classes.navigationItems} style={{ padding: 0 }}>
+              <NavigationItem link='/'>Home</NavigationItem>
+              <NavigationItem link='/about'>About</NavigationItem>
+              <NavigationItem link='/culture'>Culture</NavigationItem>
+              <NavigationItem link='/careers'>Careers</NavigationItem>
+              <NavigationItem link='/'>Contacts</NavigationItem>
+            </ul>
           </div>
           <div className={classes.BottomItems}>
-            <div className={classes.Disclaimer}>
+            <div className={classes.copyright}>
               © 2020 Dynamic Technology Lab Pte Ltd. All Rights Reserved.
             </div>
             <div className={classes.LegalNav}>

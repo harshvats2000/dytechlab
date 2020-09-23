@@ -4,7 +4,7 @@ import NavigationItems from '../Navigation/NavigationItems/NavigationItems';
 import MenuToggle from '../DropdownMenu/MenuToggle/MenuToggle';
 import { Link } from 'react-router-dom';
 
-const toolbar = (props) => {
+const Toolbar = (props) => {
   return (
     <div className={classes.Toolbar}>
       <Link to='/'>
@@ -20,4 +20,4 @@ const toolbar = (props) => {
   );
 };
 
-export default toolbar;
+export default Toolbar;

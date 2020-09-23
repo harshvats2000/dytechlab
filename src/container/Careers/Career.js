@@ -3,56 +3,83 @@ import classes from './index.module.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import OpeningText from '../../components/OpeningText';
-import { p_color, jobs, s_color } from '../../constants';
+import { p_color, jobs } from '../../constants';
+import Select from 'react-select';
+
+const locations = [
+  { value: 'All', label: 'All' },
+  { value: 'Singapore', label: 'Singapore' },
+  { value: 'Shanghai', label: 'Shanghai' },
+];
+
+const departments = [
+  { value: 'All', label: 'All' },
+  { value: 'Trading', label: 'Trading' },
+  { value: 'Technology', label: 'Technology' },
+  { value: 'Corporate Functions', label: 'Corporate Functions' },
+];
+
+const types = [
+  { value: 'All', label: 'All' },
+  { value: 'Intern', label: 'Intern' },
+  { value: 'Full Time', label: 'Full Time' },
+];
+
+const selectStyles = {
+  control: (styles) => ({ ...styles }),
+  option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+    return {
+      ...styles,
+    };
+  },
+};
 
 export default function Career() {
-  const [locationsFilter, setLocationsFilter] = useState('All-locations');
-  const [departmentsFilter, setDepartmentsFilter] = useState('All-departments');
   const [availableJobs, setAvailableJobs] = useState(jobs);
   const [noJobs, setNoJobs] = useState(false);
+  const [location, setLocation] = useState({ value: 'All', label: 'Select Location...' });
+  const [department, setDepartment] = useState({
+    value: 'All',
+    label: 'Select Department...',
+  });
+  const [type, setType] = useState({ value: 'All', label: 'Select Type...' });
 
-  // Change colors of locations filter
-  const changeLocationStyles = () => {
-    var el = document.getElementsByClassName(locationsFilter)[0];
-    var locations = document.getElementsByClassName('location');
-    for (var i = 0, max = locations.length; i < max; i++) {
-      locations[i].style.color = 'gray';
-    }
-    el.style.color = s_color;
-  };
-
-  // Change colors of departments filter
-  const changeDepartmentStyles = () => {
-    var el = document.getElementsByClassName(departmentsFilter)[0];
-    var departments = document.getElementsByClassName('department');
-    for (var i = 0, max = departments.length; i < max; i++) {
-      departments[i].style.color = 'gray';
-    }
-    el.style.color = s_color;
-  };
-
-  const changeAvailableJobs = () => {
+  const updateJobs = () => {
     let res = jobs;
-    if (locationsFilter !== 'All-locations') {
-      res = jobs.filter((job) => job.location === locationsFilter);
+
+    // Filter locations
+    if (location.value !== 'All') {
+      res = jobs.filter((job) => job.location === location.value);
+      setAvailableJobs(res);
     }
-    if (departmentsFilter !== 'All-departments') {
-      res = res.filter((job) => job.department === departmentsFilter);
+
+    // Filter departments
+    if (department.value !== 'All') {
+      res = res.filter((job) => job.department === department.value);
+    }
+
+    // Filter types
+    if (type.value !== 'All') {
+      res = res.filter((job) => job.type === type.value);
     }
     setAvailableJobs(res);
-    if (res.length === 0) {
-      setNoJobs(true);
-    } else {
-      setNoJobs(false);
-    }
+  };
+
+  const handleLocationChange = (e) => {
+    setLocation(e);
+  };
+
+  const handleDepartmentChange = (e) => {
+    setDepartment(e);
+  };
+
+  const handleTypeChange = (e) => {
+    setType(e);
   };
 
   useEffect(() => {
-    changeLocationStyles();
-    changeDepartmentStyles();
-
-    changeAvailableJobs();
-  }, [locationsFilter, departmentsFilter]);
+    updateJobs();
+  }, [location, department, type]);
 
   return (
     <>
@@ -80,83 +107,44 @@ export default function Career() {
             <h1 className='heading'>Open Positions</h1>
 
             <div className={classes.careers_body}>
-              <div className={classes.filter}>
-                <h4 className='heading'>Job locations</h4>
-
-                <div className={classes.locations}>
-                  <h5
-                    className='underline-dark All-locations location'
-                    onClick={(e) => setLocationsFilter('All-locations')}
-                  >
-                    All
-                  </h5>
-
-                  <h5
-                    className='underline-dark Shanghai location'
-                    onClick={(e) => setLocationsFilter('Shanghai')}
-                  >
-                    Shanghai
-                  </h5>
-
-                  <h5
-                    className='underline-dark Singapore location'
-                    onClick={(e) => setLocationsFilter('Singapore')}
-                  >
-                    Singapore
-                  </h5>
+              <div className={classes.filters}>
+                <div className={classes.location_filter}>
+                  <Select
+                    value={location}
+                    onChange={handleLocationChange}
+                    options={locations}
+                    styles={selectStyles}
+                  />
                 </div>
 
-                <h4 className='heading'>Job Departments</h4>
-                <div className={classes.departments}>
-                  <h5
-                    className='underline-dark All-departments department'
-                    onClick={(e) => setDepartmentsFilter('All-departments')}
-                  >
-                    All
-                  </h5>
-                  <h5
-                    className='underline-dark Trading department'
-                    onClick={(e) => setDepartmentsFilter('Trading')}
-                  >
-                    Trading
-                  </h5>
-                  <h5
-                    className='underline-dark Technology department'
-                    onClick={(e) => setDepartmentsFilter('Technology')}
-                  >
-                    Technology
-                  </h5>
-                  <h5
-                    className='underline-dark Corporate department'
-                    onClick={(e) => setDepartmentsFilter('Corporate')}
-                  >
-                    Corporate Functions
-                  </h5>
+                <div className={classes.department_filter}>
+                  <Select
+                    value={department}
+                    onChange={handleDepartmentChange}
+                    options={departments}
+                    styles={selectStyles}
+                  />
+                </div>
+
+                <div className={classes.type_filter}>
+                  <Select
+                    value={type}
+                    onChange={handleTypeChange}
+                    options={types}
+                    styles={selectStyles}
+                  />
                 </div>
               </div>
 
               <div className={classes.listing}>
                 {availableJobs.map((job, i) => (
-                  <div key={i} className={classes.job_card}>
-                    <h3 className='heading'>{job.name}</h3>
-
-                    <div className={classes.job_location}>
-                      <span>Location:&nbsp;&nbsp;&nbsp;</span>
-                      <span>{job.location}</span>
-                    </div>
-
-                    <div className={classes.job_department}>
-                      <span>Department:&nbsp;&nbsp;&nbsp;</span>
-                      <span>{job.department}</span>
-                    </div>
-
-                    <div className={classes.job_type}>
-                      <span>Type:&nbsp;&nbsp;&nbsp;</span>
-                      <span>{job.type}</span>
-                    </div>
+                  <div className={classes.job_card}>
+                    <h2 className={`heading ${classes.job_name}`}>{job.name}</h2>
+                    <div className={classes.job_location}>Location: {job.location}</div>
+                    <div className={classes.job_department}>Department: {job.department}</div>
+                    <div className={classes.job_type}>Type: {job.type}</div>
                   </div>
                 ))}
-                {!noJobs ? null : <h1>No Jobs available for this filter.</h1>}
               </div>
             </div>
           </div>

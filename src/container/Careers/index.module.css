@@ -37,12 +37,15 @@
   font-family: 'futura-pt', sans-serif;
 }
 
-.careers_body {
-  display: flex;
+.filters {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-around; */
+  margin-bottom: 50px;
 }
 
-.filter {
-  flex: 4;
+.filters > div {
+  margin-bottom: 10px;
 }
 
 .locations {
