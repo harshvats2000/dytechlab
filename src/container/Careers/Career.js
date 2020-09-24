@@ -3,8 +3,11 @@ import classes from './index.module.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import OpeningText from '../../components/OpeningText';
-import { p_color, jobs } from '../../constants';
+import { p_color, jobs, s_color } from '../../constants';
 import Select from 'react-select';
+import uniquid from 'uniqid';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const locations = [
   { value: 'All', label: 'All' },
@@ -27,22 +30,26 @@ const types = [
 
 const selectStyles = {
   control: (styles) => ({ ...styles }),
-  option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+  option: (styles) => {
     return {
       ...styles,
     };
   },
 };
 
+jobs.map((job) => (job.id = uniquid()));
+
 export default function Career() {
   const [availableJobs, setAvailableJobs] = useState(jobs);
   const [noJobs, setNoJobs] = useState(false);
   const [location, setLocation] = useState({ value: 'All', label: 'Select Location...' });
+  const [type, setType] = useState({ value: 'All', label: 'Select Type...' });
+  const [currJobId, setCurrJobId] = useState(null);
+
   const [department, setDepartment] = useState({
     value: 'All',
     label: 'Select Department...',
   });
-  const [type, setType] = useState({ value: 'All', label: 'Select Type...' });
 
   const updateJobs = () => {
     let res = jobs;
@@ -77,7 +84,16 @@ export default function Career() {
     setType(e);
   };
 
+  const toggleDetailsView = (id) => {
+    if (currJobId !== id) {
+      setCurrJobId(id);
+    } else {
+      setCurrJobId(null);
+    }
+  };
+
   useEffect(() => {
+    AOS.init();
     updateJobs();
   }, [location, department, type]);
 
@@ -137,12 +153,46 @@ export default function Career() {
               </div>
 
               <div className={classes.listing}>
-                {availableJobs.map((job, i) => (
-                  <div className={classes.job_card}>
+                {availableJobs.length === 0 ? (
+                  <h2 className='heading'>No Jobs for this filter.</h2>
+                ) : (
+                  <h5>{availableJobs.length} Jobs found</h5>
+                )}
+                {availableJobs.map((job) => (
+                  <div className={classes.job_card} key={job.id}>
                     <h2 className={`heading ${classes.job_name}`}>{job.name}</h2>
                     <div className={classes.job_location}>Location: {job.location}</div>
                     <div className={classes.job_department}>Department: {job.department}</div>
                     <div className={classes.job_type}>Type: {job.type}</div>
+                    <h5 style={{ color: s_color }} onClick={() => toggleDetailsView(job.id)}>
+                      {currJobId === job.id ? 'See Less' : 'See More'}
+                    </h5>
+                    {currJobId === job.id ? (
+                      <div className={classes.job_details} id={job.id} data-aos='fade-down'>
+                        <h4 className='heading'>Job Description</h4>
+                        <div>{job.description}</div>
+
+                        <h4 className='heading'>Qualifications</h4>
+                        <div>
+                          {job.qualifications.map((qual, i) => (
+                            <div key={i}>
+                              <img src='/images/career/tick.svg' className={classes.tick} />
+                              {qual}
+                            </div>
+                          ))}
+                        </div>
+
+                        <h4 className='heading'>Pluses</h4>
+                        <div>
+                          {job.pluses.map((plus, i) => (
+                            <div key={i}>
+                              <img src='/images/career/tick.svg' className={classes.tick} />
+                              {plus}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ) : null}
                   </div>
                 ))}
               </div>
