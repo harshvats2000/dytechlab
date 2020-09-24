@@ -13,7 +13,7 @@ class Footer extends Component {
               <NavigationItem link='/about'>About</NavigationItem>
               <NavigationItem link='/culture'>Culture</NavigationItem>
               <NavigationItem link='/careers'>Careers</NavigationItem>
-              <NavigationItem link='/'>Contacts</NavigationItem>
+              <NavigationItem link='/contact'>Contacts</NavigationItem>
             </ul>
           </div>
           <div className={classes.BottomItems}>

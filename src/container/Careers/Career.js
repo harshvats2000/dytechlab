@@ -158,21 +158,38 @@ export default function Career() {
                 ) : (
                   <h5>{availableJobs.length} Jobs found</h5>
                 )}
+
                 {availableJobs.map((job) => (
                   <div className={classes.job_card} key={job.id}>
-                    <h2 className={`heading ${classes.job_name}`}>{job.name}</h2>
-                    <div className={classes.job_location}>Location: {job.location}</div>
-                    <div className={classes.job_department}>Department: {job.department}</div>
-                    <div className={classes.job_type}>Type: {job.type}</div>
+                    <h2 className={`heading`}>{job.name}</h2>
+
+                    <div className={classes.job_card_body}>
+                      <div className={classes.job_card_body_left}>
+                        <div className={classes.job_location}>Location: {job.location}</div>
+
+                        <div className={classes.job_department}>
+                          Department: {job.department}
+                        </div>
+
+                        <div className={classes.job_type}>Type: {job.type}</div>
+                      </div>
+                      <div className={classes.job_card_body_right}>
+                        <button className='btn'>Apply Now</button>
+                      </div>
+                    </div>
+
                     <h5 style={{ color: s_color }} onClick={() => toggleDetailsView(job.id)}>
                       {currJobId === job.id ? 'See Less' : 'See More'}
                     </h5>
+
                     {currJobId === job.id ? (
                       <div className={classes.job_details} id={job.id} data-aos='fade-down'>
                         <h4 className='heading'>Job Description</h4>
+
                         <div>{job.description}</div>
 
                         <h4 className='heading'>Qualifications</h4>
+
                         <div>
                           {job.qualifications.map((qual, i) => (
                             <div key={i}>
@@ -183,6 +200,7 @@ export default function Career() {
                         </div>
 
                         <h4 className='heading'>Pluses</h4>
+
                         <div>
                           {job.pluses.map((plus, i) => (
                             <div key={i}>
