@@ -230,35 +230,44 @@ export default function Career() {
 
                 <div className={classes.container_right}>
                   {!currJob ? null : (
-                    <div style={{ position: 'sticky', top: '150px' }}>
-                      <h2 className='heading'>{currJob.name}</h2>
-                      <h4 className='heading'>Job Description</h4>
+                    <div
+                      style={{
+                        position: 'sticky',
+                        top: '150px',
+                        overflow: 'scroll',
+                        minHeight: '100vh',
+                      }}
+                    >
+                      <div style={{ height: '60vh', overflowY: 'scroll' }}>
+                        <h2 className='heading'>{currJob.name}</h2>
+                        <h4 className='heading'>Job Description</h4>
 
-                      <div>{currJob.description}</div>
+                        <div>{currJob.description}</div>
 
-                      <h4 className='heading'>Qualifications</h4>
+                        <h4 className='heading'>Qualifications</h4>
 
-                      <div>
-                        {currJob.qualifications.map((qual, i) => (
-                          <div key={i}>
-                            <img src='/images/career/tick.svg' className={classes.tick} />
-                            {qual}
-                          </div>
-                        ))}
+                        <div>
+                          {currJob.qualifications.map((qual, i) => (
+                            <div key={i}>
+                              <img src='/images/career/tick.svg' className={classes.tick} />
+                              {qual}
+                            </div>
+                          ))}
+                        </div>
+
+                        <h4 className='heading'>Pluses</h4>
+
+                        <div style={{ marginBottom: '20px' }}>
+                          {currJob.pluses.map((plus, i) => (
+                            <div key={i}>
+                              <img src='/images/career/tick.svg' className={classes.tick} />
+                              {plus}
+                            </div>
+                          ))}
+                        </div>
+
+                        <button className='btn'>Apply Now</button>
                       </div>
-
-                      <h4 className='heading'>Pluses</h4>
-
-                      <div style={{ marginBottom: '20px' }}>
-                        {currJob.pluses.map((plus, i) => (
-                          <div key={i}>
-                            <img src='/images/career/tick.svg' className={classes.tick} />
-                            {plus}
-                          </div>
-                        ))}
-                      </div>
-
-                      <button className='btn'>Apply Now</button>
                     </div>
                   )}
                 </div>

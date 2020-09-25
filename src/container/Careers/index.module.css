@@ -144,10 +144,10 @@
     display: flex;
   }
   .listing {
-    flex: 2;
+    flex: 1;
   }
   .container_right {
-    flex: 1;
+    flex: 2;
   }
   .job_card > h3 {
     font-size: 24px;
