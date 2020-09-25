@@ -38,9 +38,6 @@
 }
 
 .filters {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: space-around; */
   margin-bottom: 50px;
 }
 
@@ -137,10 +134,28 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
   }
-  .filter > h4 {
-    font-size: 20px;
+  .filters {
+    display: flex;
+  }
+  .filters > div {
+    margin-right: 10px;
+  }
+  .container {
+    display: flex;
+  }
+  .listing {
+    flex: 2;
+  }
+  .container_right {
+    flex: 1;
   }
   .job_card > h3 {
     font-size: 24px;
+  }
+  .job_details_container {
+    display: none;
+  }
+  .job_card > h5 {
+    /* display: none; */
   }
 }

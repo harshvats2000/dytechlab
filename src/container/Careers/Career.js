@@ -29,7 +29,7 @@ const types = [
 ];
 
 const selectStyles = {
-  control: (styles) => ({ ...styles }),
+  control: (styles) => ({ ...styles, minWidth: '200px' }),
   option: (styles) => {
     return {
       ...styles,
@@ -45,6 +45,7 @@ export default function Career() {
   const [location, setLocation] = useState({ value: 'All', label: 'Select Location...' });
   const [type, setType] = useState({ value: 'All', label: 'Select Type...' });
   const [currJobId, setCurrJobId] = useState(null);
+  const currJob = jobs[jobs.findIndex((job) => job.id === currJobId)];
 
   const [department, setDepartment] = useState({
     value: 'All',
@@ -152,67 +153,115 @@ export default function Career() {
                 </div>
               </div>
 
-              <div className={classes.listing}>
-                {availableJobs.length === 0 ? (
-                  <h2 className='heading'>No Jobs for this filter.</h2>
-                ) : (
-                  <h5>{availableJobs.length} Jobs found</h5>
-                )}
+              <div className={classes.container}>
+                <div className={classes.listing}>
+                  {availableJobs.length === 0 ? (
+                    <h2 className='heading'>No Jobs for this filter.</h2>
+                  ) : (
+                    <h5>{availableJobs.length} Jobs found</h5>
+                  )}
 
-                {availableJobs.map((job) => (
-                  <div className={classes.job_card} key={job.id}>
-                    <h2 className={`heading`}>{job.name}</h2>
+                  {availableJobs.map((job) => (
+                    <div className={classes.job_card} key={job.id}>
+                      <h2 className={`heading`}>{job.name}</h2>
 
-                    <div className={classes.job_card_body}>
-                      <div className={classes.job_card_body_left}>
-                        <div className={classes.job_location}>Location: {job.location}</div>
+                      <div className={classes.job_card_body}>
+                        <div className={classes.job_card_body_left}>
+                          <div className={classes.job_location}>Location: {job.location}</div>
 
-                        <div className={classes.job_department}>
-                          Department: {job.department}
+                          <div className={classes.job_department}>
+                            Department: {job.department}
+                          </div>
+
+                          <div className={classes.job_type}>Type: {job.type}</div>
                         </div>
-
-                        <div className={classes.job_type}>Type: {job.type}</div>
+                        <div className={classes.job_card_body_right}>
+                          <button className='btn'>Apply Now</button>
+                        </div>
                       </div>
-                      <div className={classes.job_card_body_right}>
-                        <button className='btn'>Apply Now</button>
+
+                      <h5 style={{ color: s_color }} onClick={() => toggleDetailsView(job.id)}>
+                        {currJobId === job.id ? 'See Less' : 'See More'}
+                      </h5>
+                      <div className={classes.job_details_container}>
+                        {currJobId === job.id ? (
+                          <div
+                            className={classes.job_details}
+                            id={job.id}
+                            data-aos='fade-down'
+                          >
+                            <h4 className='heading'>Job Description</h4>
+
+                            <div>{job.description}</div>
+
+                            <h4 className='heading'>Qualifications</h4>
+
+                            <div>
+                              {job.qualifications.map((qual, i) => (
+                                <div key={i}>
+                                  <img
+                                    src='/images/career/tick.svg'
+                                    className={classes.tick}
+                                  />
+                                  {qual}
+                                </div>
+                              ))}
+                            </div>
+
+                            <h4 className='heading'>Pluses</h4>
+
+                            <div>
+                              {job.pluses.map((plus, i) => (
+                                <div key={i}>
+                                  <img
+                                    src='/images/career/tick.svg'
+                                    className={classes.tick}
+                                  />
+                                  {plus}
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        ) : null}
                       </div>
                     </div>
+                  ))}
+                </div>
 
-                    <h5 style={{ color: s_color }} onClick={() => toggleDetailsView(job.id)}>
-                      {currJobId === job.id ? 'See Less' : 'See More'}
-                    </h5>
+                <div className={classes.container_right}>
+                  {!currJob ? null : (
+                    <div style={{ position: 'sticky', top: '150px' }}>
+                      <h2 className='heading'>{currJob.name}</h2>
+                      <h4 className='heading'>Job Description</h4>
 
-                    {currJobId === job.id ? (
-                      <div className={classes.job_details} id={job.id} data-aos='fade-down'>
-                        <h4 className='heading'>Job Description</h4>
+                      <div>{currJob.description}</div>
 
-                        <div>{job.description}</div>
+                      <h4 className='heading'>Qualifications</h4>
 
-                        <h4 className='heading'>Qualifications</h4>
-
-                        <div>
-                          {job.qualifications.map((qual, i) => (
-                            <div key={i}>
-                              <img src='/images/career/tick.svg' className={classes.tick} />
-                              {qual}
-                            </div>
-                          ))}
-                        </div>
-
-                        <h4 className='heading'>Pluses</h4>
-
-                        <div>
-                          {job.pluses.map((plus, i) => (
-                            <div key={i}>
-                              <img src='/images/career/tick.svg' className={classes.tick} />
-                              {plus}
-                            </div>
-                          ))}
-                        </div>
+                      <div>
+                        {currJob.qualifications.map((qual, i) => (
+                          <div key={i}>
+                            <img src='/images/career/tick.svg' className={classes.tick} />
+                            {qual}
+                          </div>
+                        ))}
                       </div>
-                    ) : null}
-                  </div>
-                ))}
+
+                      <h4 className='heading'>Pluses</h4>
+
+                      <div style={{ marginBottom: '20px' }}>
+                        {currJob.pluses.map((plus, i) => (
+                          <div key={i}>
+                            <img src='/images/career/tick.svg' className={classes.tick} />
+                            {plus}
+                          </div>
+                        ))}
+                      </div>
+
+                      <button className='btn'>Apply Now</button>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
