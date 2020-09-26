@@ -98,21 +98,6 @@ export default function Career() {
     updateJobs();
   }, [location, department, type]);
 
-  // useEffect(() => {
-  //   const el = document.getElementById('sticky-scroll');
-  //   if (el) {
-  //     el.addEventListener('scroll', () => {
-  //       console.log(window.pageYOffset);
-  //       if (window.pageYOffset > 450 && window.pageYOffset < 1150) {
-  //         el.style.paddingBottom = 650 - window.pageYOffset / 3 + 'px';
-  //       }
-  //       if (window.pageYOffset > 1154) {
-  //         el.style.paddingBottom = 0;
-  //       }
-  //     });
-  //   }
-  // });
-
   return (
     <>
       <div className={classes.root}>
@@ -288,7 +273,6 @@ export default function Career() {
                           height: '85vh',
                           overflowY: 'scroll',
                           scrollbarWidth: 'none',
-                          background: 'red',
                         }}
                       >
                         <h2 className='heading'>{currJob.name}</h2>

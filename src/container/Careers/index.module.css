@@ -67,6 +67,7 @@
 .d_heading {
   display: none;
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .job_location {
