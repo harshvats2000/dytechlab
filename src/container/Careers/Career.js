@@ -41,11 +41,10 @@ jobs.map((job) => (job.id = uniquid()));
 
 export default function Career() {
   const [availableJobs, setAvailableJobs] = useState(jobs);
-  const [noJobs, setNoJobs] = useState(false);
   const [location, setLocation] = useState({ value: 'All', label: 'Select Location...' });
   const [type, setType] = useState({ value: 'All', label: 'Select Type...' });
   const [currJobId, setCurrJobId] = useState(null);
-  const currJob = jobs[jobs.findIndex((job) => job.id === currJobId)];
+  const currJob = currJobId && jobs[jobs.findIndex((job) => job.id === currJobId)];
 
   const [department, setDepartment] = useState({
     value: 'All',
@@ -70,6 +69,10 @@ export default function Career() {
     if (type.value !== 'All') {
       res = res.filter((job) => job.type === type.value);
     }
+    if (res.length === 0) {
+      setCurrJobId(null);
+    }
+
     setAvailableJobs(res);
   };
 
@@ -97,6 +100,10 @@ export default function Career() {
     AOS.init();
     updateJobs();
   }, [location, department, type]);
+
+  useEffect(() => {
+    setCurrJobId(availableJobs[0]?.id);
+  }, [availableJobs]);
 
   return (
     <>
@@ -273,6 +280,7 @@ export default function Career() {
                           height: '85vh',
                           overflowY: 'scroll',
                           scrollbarWidth: 'none',
+                          paddingRight: '20px',
                         }}
                       >
                         <h2 className='heading'>{currJob.name}</h2>

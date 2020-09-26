@@ -66,6 +66,10 @@
   text-align: left;
 }
 
+.card_body > p {
+  text-align: left;
+}
+
 .fun_heading {
   font-size: 28px;
   line-height: 2.5rem;
