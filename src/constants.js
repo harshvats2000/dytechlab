@@ -3,7 +3,7 @@ export const s_color = '#233b56';
 
 export const jobs = [
   {
-    name: 'Application support specialist',
+    name: 'Fundamental Quantitative Researcher',
     location: 'Singapore',
     department: 'Trading',
     type: 'Intern',

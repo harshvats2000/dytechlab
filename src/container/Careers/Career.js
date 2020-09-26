@@ -253,7 +253,6 @@ export default function Career() {
                       style={{
                         position: 'sticky',
                         top: '150px',
-                        overflow: 'scroll',
                         minHeight: '100vh',
                       }}
                     >
