@@ -144,10 +144,10 @@
     display: flex;
   }
   .listing {
-    flex: 1;
+    flex: 3;
   }
   .container_right {
-    flex: 3;
+    flex: 7;
     text-align: justify;
     margin-left: 20px;
     padding-left: 20px;
