@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 :root {
   --p-color: #24a3d8;
   --s-color: #233b56;

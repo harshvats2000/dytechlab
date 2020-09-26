@@ -60,6 +60,15 @@
   margin-bottom: 50px;
 }
 
+.m_heading {
+  display: block;
+}
+
+.d_heading {
+  display: none;
+  cursor: pointer;
+}
+
 .job_location {
   display: flex;
   justify-content: flex-start;
@@ -143,12 +152,22 @@
   .container {
     display: flex;
   }
+  .d_heading {
+    display: block;
+  }
+  .m_heading {
+    display: none;
+  }
   .listing {
     flex: 3;
+  }
+  .see_more {
+    display: none;
   }
   .container_right {
     flex: 7;
     text-align: justify;
+    white-space: break-spaces;
     margin-left: 20px;
     padding-left: 20px;
     border-left: 1px solid gainsboro;

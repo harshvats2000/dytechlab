@@ -163,7 +163,13 @@ export default function Career() {
 
                   {availableJobs.map((job) => (
                     <div className={classes.job_card} key={job.id}>
-                      <h2 className={`heading`}>{job.name}</h2>
+                      <h2 className={`heading ${classes.m_heading}`}>{job.name}</h2>
+                      <h2
+                        className={`heading ${classes.d_heading}`}
+                        onClick={() => toggleDetailsView(job.id)}
+                      >
+                        {job.name}
+                      </h2>
 
                       <div className={classes.job_card_body}>
                         <div className={classes.job_card_body_left}>
@@ -180,9 +186,14 @@ export default function Career() {
                         </div>
                       </div>
 
-                      <h5 style={{ color: s_color }} onClick={() => toggleDetailsView(job.id)}>
+                      <h5
+                        style={{ color: s_color }}
+                        onClick={() => toggleDetailsView(job.id)}
+                        className={classes.see_more}
+                      >
                         {currJobId === job.id ? 'See Less' : 'See More'}
                       </h5>
+
                       <div
                         className={classes.job_details_container}
                         style={{ lineHeight: '1.5rem' }}
@@ -252,50 +263,75 @@ export default function Career() {
                     <div
                       style={{
                         position: 'sticky',
-                        top: '150px',
+                        top: '120px',
                         minHeight: '100vh',
                       }}
                     >
                       <div
-                        style={{ height: '80vh', overflowY: 'scroll', scrollbarWidth: 'none' }}
+                        style={{
+                          height: '85vh',
+                          overflowY: 'scroll',
+                          scrollbarWidth: 'none',
+                          paddingBottom: '30px',
+                        }}
                       >
                         <h2 className='heading'>{currJob.name}</h2>
-                        <h4 className='heading'>Job Description</h4>
+                        <h3 className='heading'>Job Description</h3>
 
                         <p
                           className='para'
-                          style={{ textAlign: 'justify', whiteSpace: 'break-spaces' }}
+                          style={{
+                            lineHeight: '1.4',
+                          }}
                         >
                           {currJob.description}
                         </p>
 
-                        <h4 className='heading'>Job Responsibilities</h4>
+                        <h3 className='heading'>Job Responsibilities</h3>
 
                         <div>
                           {currJob.responsibilities.map((resp, i) => (
-                            <p className='para' key={i}>
+                            <p
+                              className='para'
+                              style={{
+                                lineHeight: '1.4',
+                              }}
+                              key={i}
+                            >
                               <img src='/images/career/tick.svg' className={classes.tick} />
                               {resp}
                             </p>
                           ))}
                         </div>
 
-                        <h4 className='heading'>Qualifications</h4>
+                        <h3 className='heading'>Qualifications</h3>
 
                         <div>
                           {currJob.qualifications.map((qual, i) => (
-                            <p className='para' key={i}>
+                            <p
+                              className='para'
+                              key={i}
+                              style={{
+                                lineHeight: '1.4',
+                              }}
+                            >
                               <img src='/images/career/tick.svg' className={classes.tick} />
                               {qual}
                             </p>
                           ))}
                         </div>
 
-                        <h4 className='heading'>Pluses</h4>
+                        <h3 className='heading'>Pluses</h3>
 
                         <div style={{ marginBottom: '20px' }}>
                           {currJob.pluses.map((plus, i) => (
-                            <p className='para' key={i}>
+                            <p
+                              className='para'
+                              key={i}
+                              style={{
+                                lineHeight: '1.4',
+                              }}
+                            >
                               <img src='/images/career/tick.svg' className={classes.tick} />
                               {plus}
                             </p>
