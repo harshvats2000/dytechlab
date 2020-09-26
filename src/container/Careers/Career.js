@@ -257,7 +257,9 @@ export default function Career() {
                         minHeight: '100vh',
                       }}
                     >
-                      <div style={{ height: '80vh', overflowY: 'scroll' }}>
+                      <div
+                        style={{ height: '80vh', overflowY: 'scroll', scrollbarWidth: 'none' }}
+                      >
                         <h2 className='heading'>{currJob.name}</h2>
                         <h4 className='heading'>Job Description</h4>
 
