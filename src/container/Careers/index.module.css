@@ -160,6 +160,12 @@
   }
   .listing {
     flex: 3;
+    height: 85vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+  }
+  .listing::-webkit-scrollbar {
+    display: none;
   }
   .see_more {
     display: none;
