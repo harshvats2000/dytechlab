@@ -113,7 +113,7 @@
 @media only screen and (min-width: 900px) {
   .body {
     margin: 50px auto 20px auto;
-    max-width: 1200px;
+    max-width: 1400px;
   }
   .banner {
     margin-top: 100px;
@@ -147,7 +147,11 @@
     flex: 1;
   }
   .container_right {
-    flex: 2;
+    flex: 3;
+    text-align: justify;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 1px solid gainsboro;
   }
   .job_card > h3 {
     font-size: 24px;
@@ -155,7 +159,7 @@
   .job_details_container {
     display: none;
   }
-  .job_card > h5 {
-    /* display: none; */
+  .container_right > div > div::-webkit-scrollbar {
+    display: none;
   }
 }

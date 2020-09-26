@@ -8,9 +8,25 @@ export const jobs = [
     department: 'Trading',
     type: 'Intern',
     description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae laborum nemo provident recusandae inventore sunt qui doloremque reiciendis omnis ex.',
-    qualifications: ['point 1', 'point 2', 'point 3'],
-    pluses: ['plus 1', 'plus 2'],
+      'The trading operations team is primarily responsible for managing DTL’s trading environment and ensuring that everything runs smoothly. \n\nWe help DTL build and maintain best-in-class systems and processes.This involves configuring, monitoring and optimising the firm’s trading with a focus on risk management and control. \n\nThe team oversees core operational processes and participates in projects and initiatives that will help streamline critical workflows. Project areas include: market access, trade monitoring, process optimization, system enhancement, alpha management and automation. This is a mission-critical role that requires a dependable individual with a can-do attitude and exceptional attention to detail.',
+    qualifications: [
+      'Proficient in Python and Bash scripting',
+      'Comfortable with Linux',
+      'Strong business judgment and ability to identify and escalate issues',
+      'Patient, extremely detail-oriented and highly responsible',
+      'Excellent problem-solving skills',
+      'Good communication and interpersonal skills',
+    ],
+    responsibilities: [
+      'Monitor global trading activities and analyse and troubleshoot issues that may arise in the normal course of business in a timely and accurate manner',
+      'Work collaboratively with researchers and developers and be their first line of support for any queries',
+      'Identify opportunities to automate and streamline legacy processes to enhance productivity and controls',
+      'Analyse post-trade data to evaluate the performance of trading strategies and algorithms in different stock markets and identify potential trading risks',
+    ],
+    pluses: [
+      'Understanding of market data/order entry systems',
+      'Interest in the financial markets',
+    ],
   },
   {
     name: 'Application support specialist',
@@ -18,9 +34,25 @@ export const jobs = [
     department: 'Technology',
     type: 'Full Time',
     description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae laborum nemo provident recusandae inventore sunt qui doloremque reiciendis omnis ex.',
-    qualifications: ['point 1', 'point 2', 'point 3'],
-    pluses: ['plus 1', 'plus 2'],
+      'The trading operations team is primarily responsible for managing DTL’s trading environment and ensuring that everything runs smoothly. \n\nWe help DTL build and maintain best-in-class systems and processes.This involves configuring, monitoring and optimising the firm’s trading with a focus on risk management and control. \n\nThe team oversees core operational processes and participates in projects and initiatives that will help streamline critical workflows. Project areas include: market access, trade monitoring, process optimization, system enhancement, alpha management and automation. This is a mission-critical role that requires a dependable individual with a can-do attitude and exceptional attention to detail.',
+    qualifications: [
+      'Proficient in Python and Bash scripting',
+      'Comfortable with Linux',
+      'Strong business judgment and ability to identify and escalate issues',
+      'Patient, extremely detail-oriented and highly responsible',
+      'Excellent problem-solving skills',
+      'Good communication and interpersonal skills',
+    ],
+    responsibilities: [
+      'Monitor global trading activities and analyse and troubleshoot issues that may arise in the normal course of business in a timely and accurate manner',
+      'Work collaboratively with researchers and developers and be their first line of support for any queries',
+      'Identify opportunities to automate and streamline legacy processes to enhance productivity and controls',
+      'Analyse post-trade data to evaluate the performance of trading strategies and algorithms in different stock markets and identify potential trading risks',
+    ],
+    pluses: [
+      'Understanding of market data/order entry systems',
+      'Interest in the financial markets',
+    ],
   },
   {
     name: 'China infrastructure engineer',
@@ -28,9 +60,25 @@ export const jobs = [
     department: 'Technology',
     type: 'Intern',
     description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae laborum nemo provident recusandae inventore sunt qui doloremque reiciendis omnis ex.',
-    qualifications: ['point 1', 'point 2', 'point 3'],
-    pluses: ['plus 1', 'plus 2'],
+      'The trading operations team is primarily responsible for managing DTL’s trading environment and ensuring that everything runs smoothly. \n\nWe help DTL build and maintain best-in-class systems and processes.This involves configuring, monitoring and optimising the firm’s trading with a focus on risk management and control. \n\nThe team oversees core operational processes and participates in projects and initiatives that will help streamline critical workflows. Project areas include: market access, trade monitoring, process optimization, system enhancement, alpha management and automation. This is a mission-critical role that requires a dependable individual with a can-do attitude and exceptional attention to detail.',
+    qualifications: [
+      'Proficient in Python and Bash scripting',
+      'Comfortable with Linux',
+      'Strong business judgment and ability to identify and escalate issues',
+      'Patient, extremely detail-oriented and highly responsible',
+      'Excellent problem-solving skills',
+      'Good communication and interpersonal skills',
+    ],
+    responsibilities: [
+      'Monitor global trading activities and analyse and troubleshoot issues that may arise in the normal course of business in a timely and accurate manner',
+      'Work collaboratively with researchers and developers and be their first line of support for any queries',
+      'Identify opportunities to automate and streamline legacy processes to enhance productivity and controls',
+      'Analyse post-trade data to evaluate the performance of trading strategies and algorithms in different stock markets and identify potential trading risks',
+    ],
+    pluses: [
+      'Understanding of market data/order entry systems',
+      'Interest in the financial markets',
+    ],
   },
   {
     name: 'Canda DevOps engineer',
@@ -38,9 +86,25 @@ export const jobs = [
     department: 'Trading',
     type: 'Full Time',
     description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae laborum nemo provident recusandae inventore sunt qui doloremque reiciendis omnis ex.',
-    qualifications: ['point 1', 'point 2', 'point 3'],
-    pluses: ['plus 1', 'plus 2'],
+      'The trading operations team is primarily responsible for managing DTL’s trading environment and ensuring that everything runs smoothly. \n\nWe help DTL build and maintain best-in-class systems and processes.This involves configuring, monitoring and optimising the firm’s trading with a focus on risk management and control. \n\nThe team oversees core operational processes and participates in projects and initiatives that will help streamline critical workflows. Project areas include: market access, trade monitoring, process optimization, system enhancement, alpha management and automation. This is a mission-critical role that requires a dependable individual with a can-do attitude and exceptional attention to detail.',
+    qualifications: [
+      'Proficient in Python and Bash scripting',
+      'Comfortable with Linux',
+      'Strong business judgment and ability to identify and escalate issues',
+      'Patient, extremely detail-oriented and highly responsible',
+      'Excellent problem-solving skills',
+      'Good communication and interpersonal skills',
+    ],
+    responsibilities: [
+      'Monitor global trading activities and analyse and troubleshoot issues that may arise in the normal course of business in a timely and accurate manner',
+      'Work collaboratively with researchers and developers and be their first line of support for any queries',
+      'Identify opportunities to automate and streamline legacy processes to enhance productivity and controls',
+      'Analyse post-trade data to evaluate the performance of trading strategies and algorithms in different stock markets and identify potential trading risks',
+    ],
+    pluses: [
+      'Understanding of market data/order entry systems',
+      'Interest in the financial markets',
+    ],
   },
   {
     name: 'Data center specialist',
@@ -48,9 +112,25 @@ export const jobs = [
     department: 'Technology',
     type: 'Full Time',
     description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae laborum nemo provident recusandae inventore sunt qui doloremque reiciendis omnis ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, earum quisquam eligendi tenetur dolor nostrum et quas qui repudiandae perspiciatis id nesciunt amet, quos quibusdam commodi voluptas sunt, officiis illo magnam vel unde assumenda incidunt odio officia? Deserunt explicabo quidem dicta commodi, natus ea ratione, quam facilis excepturi autem voluptatibus veniam repellendus eius fugiat, incidunt accusantium. Aliquid praesentium atque illo iure beatae rerum, dignissimos error, neque dolorem tenetur a. Nobis eaque corrupti corporis! Aperiam perferendis corporis laudantium eligendi explicabo animi aspernatur quos? Molestias dolorum impedit iure rerum et ipsum quibusdam facilis quidem, delectus voluptatibus assumenda corrupti, neque fugiat minus praesentium!',
-    qualifications: ['point 1', 'point 2', 'point 3'],
-    pluses: ['plus 1', 'plus 2'],
+      'The trading operations team is primarily responsible for managing DTL’s trading environment and ensuring that everything runs smoothly. \n\nWe help DTL build and maintain best-in-class systems and processes.This involves configuring, monitoring and optimising the firm’s trading with a focus on risk management and control. \n\nThe team oversees core operational processes and participates in projects and initiatives that will help streamline critical workflows. Project areas include: market access, trade monitoring, process optimization, system enhancement, alpha management and automation. This is a mission-critical role that requires a dependable individual with a can-do attitude and exceptional attention to detail.',
+    qualifications: [
+      'Proficient in Python and Bash scripting',
+      'Comfortable with Linux',
+      'Strong business judgment and ability to identify and escalate issues',
+      'Patient, extremely detail-oriented and highly responsible',
+      'Excellent problem-solving skills',
+      'Good communication and interpersonal skills',
+    ],
+    responsibilities: [
+      'Monitor global trading activities and analyse and troubleshoot issues that may arise in the normal course of business in a timely and accurate manner',
+      'Work collaboratively with researchers and developers and be their first line of support for any queries',
+      'Identify opportunities to automate and streamline legacy processes to enhance productivity and controls',
+      'Analyse post-trade data to evaluate the performance of trading strategies and algorithms in different stock markets and identify potential trading risks',
+    ],
+    pluses: [
+      'Understanding of market data/order entry systems',
+      'Interest in the financial markets',
+    ],
   },
   {
     name: 'Linux expert',
@@ -58,9 +138,25 @@ export const jobs = [
     department: 'Technology',
     type: 'Full Time',
     description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae laborum nemo provident recusandae inventore sunt qui doloremque reiciendis omnis ex.',
-    qualifications: ['point 1', 'point 2', 'point 3'],
-    pluses: ['plus 1', 'plus 2'],
+      'The trading operations team is primarily responsible for managing DTL’s trading environment and ensuring that everything runs smoothly. \n\nWe help DTL build and maintain best-in-class systems and processes.This involves configuring, monitoring and optimising the firm’s trading with a focus on risk management and control. \n\nThe team oversees core operational processes and participates in projects and initiatives that will help streamline critical workflows. Project areas include: market access, trade monitoring, process optimization, system enhancement, alpha management and automation. This is a mission-critical role that requires a dependable individual with a can-do attitude and exceptional attention to detail.',
+    qualifications: [
+      'Proficient in Python and Bash scripting',
+      'Comfortable with Linux',
+      'Strong business judgment and ability to identify and escalate issues',
+      'Patient, extremely detail-oriented and highly responsible',
+      'Excellent problem-solving skills',
+      'Good communication and interpersonal skills',
+    ],
+    responsibilities: [
+      'Monitor global trading activities and analyse and troubleshoot issues that may arise in the normal course of business in a timely and accurate manner',
+      'Work collaboratively with researchers and developers and be their first line of support for any queries',
+      'Identify opportunities to automate and streamline legacy processes to enhance productivity and controls',
+      'Analyse post-trade data to evaluate the performance of trading strategies and algorithms in different stock markets and identify potential trading risks',
+    ],
+    pluses: [
+      'Understanding of market data/order entry systems',
+      'Interest in the financial markets',
+    ],
   },
   {
     name: 'Wordpress developer',
@@ -68,8 +164,24 @@ export const jobs = [
     department: 'Technology',
     type: 'Intern',
     description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae laborum nemo provident recusandae inventore sunt qui doloremque reiciendis omnis ex.',
-    qualifications: ['point 1', 'point 2', 'point 3'],
-    pluses: ['plus 1', 'plus 2'],
+      'The trading operations team is primarily responsible for managing DTL’s trading environment and ensuring that everything runs smoothly. \n\nWe help DTL build and maintain best-in-class systems and processes.This involves configuring, monitoring and optimising the firm’s trading with a focus on risk management and control. \n\nThe team oversees core operational processes and participates in projects and initiatives that will help streamline critical workflows. Project areas include: market access, trade monitoring, process optimization, system enhancement, alpha management and automation. This is a mission-critical role that requires a dependable individual with a can-do attitude and exceptional attention to detail.',
+    qualifications: [
+      'Proficient in Python and Bash scripting',
+      'Comfortable with Linux',
+      'Strong business judgment and ability to identify and escalate issues',
+      'Patient, extremely detail-oriented and highly responsible',
+      'Excellent problem-solving skills',
+      'Good communication and interpersonal skills',
+    ],
+    responsibilities: [
+      'Monitor global trading activities and analyse and troubleshoot issues that may arise in the normal course of business in a timely and accurate manner',
+      'Work collaboratively with researchers and developers and be their first line of support for any queries',
+      'Identify opportunities to automate and streamline legacy processes to enhance productivity and controls',
+      'Analyse post-trade data to evaluate the performance of trading strategies and algorithms in different stock markets and identify potential trading risks',
+    ],
+    pluses: [
+      'Understanding of market data/order entry systems',
+      'Interest in the financial markets',
+    ],
   },
 ];
