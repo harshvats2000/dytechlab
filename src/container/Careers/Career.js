@@ -116,6 +116,9 @@ export default function Career() {
         el.style.background = 'rgb(167, 221, 242, 0.4)';
       }
     }
+
+    let details_container = document.getElementById('sticky-scroll');
+    if (details_container) details_container.scrollTo(0, 0);
   }, [currJobId]);
 
   return (
