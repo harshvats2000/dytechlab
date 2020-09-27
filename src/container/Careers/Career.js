@@ -292,7 +292,6 @@ export default function Career() {
                         style={{
                           height: '85vh',
                           overflowY: 'scroll',
-                          scrollbarWidth: 'none',
                           paddingRight: '20px',
                         }}
                       >
