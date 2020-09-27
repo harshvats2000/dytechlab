@@ -102,8 +102,21 @@ export default function Career() {
   }, [location, department, type]);
 
   useEffect(() => {
-    setCurrJobId(availableJobs[0]?.id);
+    window.screen.width > 900 && setCurrJobId(availableJobs[0]?.id);
   }, [availableJobs]);
+
+  useEffect(() => {
+    if (window.screen.width > 900) {
+      availableJobs.map((job) => {
+        let el = document.getElementById(`id${job.id}`);
+        el.style.background = 'white';
+      });
+      let el = document.getElementById(`id${currJobId}`);
+      if (el) {
+        el.style.background = 'rgb(167, 221, 242, 0.4)';
+      }
+    }
+  }, [currJobId]);
 
   return (
     <>
@@ -169,7 +182,7 @@ export default function Career() {
                   )}
 
                   {availableJobs.map((job) => (
-                    <div className={classes.job_card} key={job.id}>
+                    <div className={classes.job_card} id={`id${job.id}`} key={job.id}>
                       <h2 className={`heading ${classes.m_heading}`}>{job.name}</h2>
                       <h2
                         className={`heading ${classes.d_heading}`}
