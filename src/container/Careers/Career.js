@@ -173,14 +173,13 @@ export default function Career() {
                 </div>
               </div>
 
+              {availableJobs.length === 0 ? (
+                <h2 className='heading'>No Jobs for this filter.</h2>
+              ) : (
+                <h5>{availableJobs.length} Jobs found</h5>
+              )}
               <div className={classes.container}>
                 <div className={classes.listing}>
-                  {availableJobs.length === 0 ? (
-                    <h2 className='heading'>No Jobs for this filter.</h2>
-                  ) : (
-                    <h5>{availableJobs.length} Jobs found</h5>
-                  )}
-
                   {availableJobs.map((job) => (
                     <div className={classes.job_card} id={`id${job.id}`} key={job.id}>
                       <h2 className={`heading ${classes.m_heading}`}>{job.name}</h2>
