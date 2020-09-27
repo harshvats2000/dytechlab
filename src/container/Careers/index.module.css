@@ -37,6 +37,10 @@
   font-family: 'futura-pt', sans-serif;
 }
 
+.container_right {
+  display: none;
+}
+
 .filters {
   margin-bottom: 50px;
 }
@@ -172,6 +176,7 @@
     display: none;
   }
   .container_right {
+    display: block;
     flex: 7;
     text-align: justify;
     white-space: break-spaces;
