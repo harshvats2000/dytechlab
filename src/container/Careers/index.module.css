@@ -177,7 +177,7 @@
     white-space: break-spaces;
     margin-left: 20px;
     padding-left: 20px;
-    border-left: 1px solid gainsboro;
+    /* border-left: 1px solid gainsboro; */
     /* scrollbar-width: none; */
   }
   .job_card > h3 {
