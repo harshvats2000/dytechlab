@@ -28,8 +28,17 @@ export default function Contact() {
         <div className={classes.body}>
           <div className={classes.cards}>
             <div className={classes.card}>
-              <img src='https://images.pexels.com/photos/1212956/pexels-photo-1212956.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' />
-              <div>Singapore</div>
+              <div className={classes.card_img1}>
+                <img src='https://images.pexels.com/photos/1212956/pexels-photo-1212956.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' />
+              </div>
+              <div className={classes.card_text}>Singapore</div>
+            </div>
+
+            <div className={classes.card}>
+              <div className={classes.card_img2}>
+                <img src='https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' />
+              </div>
+              <div className={classes.card_text}>Shanghai</div>
             </div>
           </div>
         </div>

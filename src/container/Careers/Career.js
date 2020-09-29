@@ -118,7 +118,7 @@ export default function Career() {
     }
 
     let details_container = document.getElementById('sticky-scroll');
-    if (details_container) details_container.scrollTo(0, 0);
+    if (details_container) details_container.scrollTo(0, 0); // Take user to starting when job is changed
   }, [currJobId]);
 
   return (
