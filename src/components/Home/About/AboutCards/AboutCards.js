@@ -11,56 +11,20 @@ class AboutCards extends Component {
           heading='Approach'
           text='Our strategies are founded on in-depth research, custom technology and careful risk
           assessment.'
-          animate={() => animateSVG('approach-animation', 1)}
-          logo={
-            <svg height='100px' width='100px'>
-              <path
-                id='approach-animation'
-                className='trading-logo'
-                stroke='#24a3d8'
-                strokeWidth='4.3'
-                fill='none'
-                d='M 0 100 l 25 -25 l 10 10 l 25 -25 h -15 h 17 v 15'
-                strokeDasharray=''
-                strokeDashoffset='0.00'
-              />
-            </svg>
-          }
+          img_src='/images/home/approach.png'
         />
 
         <AboutCard
           heading='Culture'
           text='As the markets have evolved, so have we, growing to include cryptoassets, venture
           capital and real estate.'
-          logo={
-            <svg height='100px' width='100px'>
-              <path
-                stroke='#24a3d8'
-                strokeWidth='4.3'
-                fill='none'
-                d='M 0 100 l 25 -25 l 10 10 l 25 -25 h -15 h 17 v 15'
-                strokeDasharray=''
-                strokeDashoffset='0.00'
-              />
-            </svg>
-          }
+          img_src='/images/home/culture.png'
         />
         <AboutCard
           heading='Careers'
           text='Our people drive our success. We hire the best, provide the right tools and reward
           outstanding results.'
-          logo={
-            <svg height='100px' width='100px'>
-              <path
-                stroke='#24a3d8'
-                strokeWidth='4.3'
-                fill='none'
-                d='M 0 100 l 25 -25 l 10 10 l 25 -25 h -15 h 17 v 15'
-                strokeDasharray=''
-                strokeDashoffset='0.00'
-              />
-            </svg>
-          }
+          img_src='/images/home/career.png'
         />
       </div>
     );

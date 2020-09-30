@@ -23,10 +23,15 @@
   transition-property: background-color, color;
   transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition-duration: 0.25s;
-  margin-top: 10px;
 }
 
 .Button:hover {
   color: #ffffff;
   background-color: var(--p-color);
+}
+
+@media only screen and (min-width: 900px) {
+  .Button {
+    margin-top: 50px;
+  }
 }

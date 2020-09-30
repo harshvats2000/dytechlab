@@ -43,7 +43,6 @@
 
 .card {
   position: relative;
-  max-width: 500px;
   cursor: pointer;
 }
 
@@ -74,11 +73,12 @@
 .text {
   position: absolute;
   bottom: 20px;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   color: white;
   left: 10px;
   white-space: pre-wrap;
   z-index: 1;
+  margin-left: 15px;
 }
 
 .address {
@@ -132,9 +132,17 @@
   }
   .cards {
     display: flex;
+    gap: 10px;
   }
   .toggle:hover {
     color: white;
     background: var(--p-color);
+  }
+  .card {
+    height: 500px;
+    flex: 1;
+  }
+  .card > img {
+    height: 100%;
   }
 }
