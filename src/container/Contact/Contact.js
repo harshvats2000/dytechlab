@@ -31,7 +31,7 @@ export default function Contact() {
     let shanghai_card = document.getElementsByClassName(classes.card)[1];
     if (shanghai) {
       shanghai_card.classList.add(classes.backdrop);
-      el.style.height = '50px';
+      el.style.height = 'auto';
       plus.style.transform = 'rotate(135deg)';
     } else {
       shanghai_card.classList.remove(classes.backdrop);
