@@ -16,7 +16,7 @@ export default function Contact() {
     let singapore_card = document.getElementsByClassName(classes.card)[0];
     if (singapore) {
       singapore_card.classList.add(classes.backdrop);
-      el.style.height = 'auto';
+      el.style.height = '55px';
       plus.style.transform = 'rotate(135deg)';
     } else {
       singapore_card.classList.remove(classes.backdrop);
@@ -31,7 +31,7 @@ export default function Contact() {
     let shanghai_card = document.getElementsByClassName(classes.card)[1];
     if (shanghai) {
       shanghai_card.classList.add(classes.backdrop);
-      el.style.height = 'auto';
+      el.style.height = '55px';
       plus.style.transform = 'rotate(135deg)';
     } else {
       shanghai_card.classList.remove(classes.backdrop);
