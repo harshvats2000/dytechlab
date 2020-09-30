@@ -52,6 +52,10 @@
   display: flex;
 }
 
+.card > div:first-child > img {
+  width: 80px;
+}
+
 .icons {
   font-size: 100px;
   flex: 1;

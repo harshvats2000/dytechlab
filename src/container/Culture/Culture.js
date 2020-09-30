@@ -35,7 +35,10 @@ export default function Culture() {
             <h1 className='heading'>Our Values</h1>
             <div className={classes.cards}>
               <div className={classes.card}>
-                <span className={`material-icons ${classes.icons}`}>school</span>
+                {/* <span className={`material-icons ${classes.icons}`}>school</span> */}
+                <div>
+                  <img src='/images/culture/teamwork.png' />
+                </div>
                 <div className={classes.card_body}>
                   <h4>Teamwork</h4>
                   <p className='para'>
@@ -45,7 +48,10 @@ export default function Culture() {
               </div>
 
               <div className={classes.card}>
-                <span className={`material-icons ${classes.icons}`}>school</span>
+                {/* <span className={`material-icons ${classes.icons}`}>school</span> */}
+                <div>
+                  <img src='/images/culture/meritocracy.png' />
+                </div>
                 <div className={classes.card_body}>
                   <h4>Meritocracy</h4>
                   <p className='para'>
@@ -55,7 +61,10 @@ export default function Culture() {
               </div>
 
               <div className={classes.card}>
-                <span className={`material-icons ${classes.icons}`}>school</span>
+                {/* <span className={`material-icons ${classes.icons}`}>school</span> */}
+                <div>
+                  <img src='/images/culture/integrity.png' />
+                </div>
                 <div className={classes.card_body}>
                   <h4>Integrity</h4>
                   <p className='para'>
@@ -67,7 +76,10 @@ export default function Culture() {
 
             <div className={classes.cards}>
               <div className={classes.card}>
-                <span className={`material-icons ${classes.icons}`}>school</span>
+                {/* <span className={`material-icons ${classes.icons}`}>school</span> */}
+                <div>
+                  <img src='/images/culture/learning.png' />
+                </div>
                 <div className={classes.card_body}>
                   <h4>Learning</h4>
                   <p className='para'>
@@ -77,7 +89,10 @@ export default function Culture() {
               </div>
 
               <div className={classes.card}>
-                <span className={`material-icons ${classes.icons}`}>school</span>
+                {/* <span className={`material-icons ${classes.icons}`}>school</span> */}
+                <div>
+                  <img src='/images/culture/agility.png' />
+                </div>
                 <div className={classes.card_body}>
                   <h4>Agility</h4>
                   <p className='para'>
