@@ -46,7 +46,10 @@ class AboutUs extends Component {
               what has always set us apart…our ability to identify and capture opportunities by
               leveraging technology, research and risk management.
             </p>
-            <img src='/images/about/1.jpeg' />
+            <img
+              src='/images/about/1.jpeg'
+              style={{ maxHeight: '400px', maxWidth: '500px', margin: 'auto' }}
+            />
           </div>
 
           <div className={classes.approach} id='about-approach'>
@@ -153,14 +156,8 @@ class AboutUs extends Component {
               hold back other organizations. Not many places do things like we do, and we like
               it that way.
             </p>
+            <img src='/images/about/trading.png' />
           </div>
-          {/* <Intro />
-          <hr />
-          <History />
-          <hr />
-          <OurApproach />
-          <hr />
-          <Trading /> */}
         </div>
         <Footer />
       </div>
