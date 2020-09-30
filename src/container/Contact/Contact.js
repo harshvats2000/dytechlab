@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './contact.module.css';
 import classes from './contact.module.css';
 import Header from '../Header/Header';
@@ -7,6 +7,39 @@ import { p_color } from '../../constants';
 import OpeningText from '../../components/OpeningText';
 
 export default function Contact() {
+  const [singapore, setSingapore] = useState(false);
+  const [shanghai, setShanghai] = useState(false);
+
+  useEffect(() => {
+    let el = document.getElementById('address1');
+    let plus = document.getElementById('plus1');
+    let singapore_card = document.getElementsByClassName(classes.card)[0];
+    if (singapore) {
+      singapore_card.classList.add(classes.backdrop);
+      el.style.height = '50px';
+      plus.style.transform = 'rotate(135deg)';
+    } else {
+      singapore_card.classList.remove(classes.backdrop);
+      plus.style.transform = 'rotate(0)';
+      el.style.height = 0;
+    }
+  }, [singapore]);
+
+  useEffect(() => {
+    let el = document.getElementById('address2');
+    let plus = document.getElementById('plus2');
+    let shanghai_card = document.getElementsByClassName(classes.card)[1];
+    if (shanghai) {
+      shanghai_card.classList.add(classes.backdrop);
+      el.style.height = '50px';
+      plus.style.transform = 'rotate(135deg)';
+    } else {
+      shanghai_card.classList.remove(classes.backdrop);
+      plus.style.transform = 'rotate(0)';
+      el.style.height = 0;
+    }
+  }, [shanghai]);
+
   return (
     <>
       <div className={classes.root}>
@@ -27,18 +60,34 @@ export default function Contact() {
 
         <div className={classes.body}>
           <div className={classes.cards}>
-            <div className={classes.card}>
-              <div className={classes.card_img1}>
-                <img src='https://images.pexels.com/photos/1212956/pexels-photo-1212956.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' />
+            <div className={classes.card} onClick={() => setSingapore(!singapore)}>
+              <img src='https://images.unsplash.com/flagged/photo-1562503542-2a1e6f03b16b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60' />
+              <div className={classes.text}>
+                Singapore
+                <div id='address1' className={classes.address}>
+                  Line1 <br />
+                  Line2 <br />
+                  Line3
+                </div>
               </div>
-              <div className={classes.card_text}>Singapore</div>
+              <div className={classes.toggle}>
+                <div id='plus1'>+</div>
+              </div>
             </div>
 
-            <div className={classes.card}>
-              <div className={classes.card_img2}>
-                <img src='https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' />
+            <div className={classes.card} onClick={() => setShanghai(!shanghai)}>
+              <img src='https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60' />
+              <div className={classes.text}>
+                Shanghai
+                <div id='address2' className={classes.address}>
+                  Line1 <br />
+                  Line2 <br />
+                  Line3
+                </div>
               </div>
-              <div className={classes.card_text}>Shanghai</div>
+              <div className={classes.toggle}>
+                <div id='plus2'>+</div>
+              </div>
             </div>
           </div>
         </div>
