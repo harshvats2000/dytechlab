@@ -63,7 +63,9 @@ class AboutUs extends Component {
 
             <div className={classes.cards}>
               <div className={classes.card}>
-                <span className={`material-icons ${classes.icons}`}>school</span>
+                <div>
+                  <img src='/images/about/cb.png' />
+                </div>
                 <div className={classes.card_body}>
                   <h4>Cultural Background</h4>
                   <p className='para'>
@@ -73,7 +75,9 @@ class AboutUs extends Component {
               </div>
 
               <div className={classes.card}>
-                <span className={`material-icons ${classes.icons}`}>school</span>
+                <div>
+                  <img src='/images/about/eb.png' />
+                </div>
                 <div className={classes.card_body}>
                   <h4>Educational Background</h4>
                   <p className='para'>
@@ -95,7 +99,9 @@ class AboutUs extends Component {
 
             <div className={classes.cards}>
               <div className={classes.card}>
-                <span className={`material-icons ${classes.icons}`}>school</span>
+                <div>
+                  <img src='/images/about/is.png' />
+                </div>
                 <div className={classes.card_body}>
                   <h4>Inhouse System</h4>
                   <p className='para'>
@@ -105,7 +111,9 @@ class AboutUs extends Component {
               </div>
 
               <div className={classes.card}>
-                <span className={`material-icons ${classes.icons}`}>school</span>
+                <div>
+                  <img src='/images/about/acm.png' />
+                </div>
                 <div className={classes.card_body}>
                   <h4>ACM Winner Team</h4>
                   <p className='para'>
@@ -115,7 +123,9 @@ class AboutUs extends Component {
               </div>
 
               <div className={classes.card}>
-                <span className={`material-icons ${classes.icons}`}>school</span>
+                <div>
+                  <img src='/images/about/tu.png' />
+                </div>
                 <div className={classes.card_body}>
                   <h4>Techniques used</h4>
                   <p className='para'>
