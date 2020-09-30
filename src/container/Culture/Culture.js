@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classes from './culture.module.css';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
@@ -6,6 +6,9 @@ import { p_color } from '../../constants';
 import OpeningText from '../../components/OpeningText';
 
 export default function Culture() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className={classes.root}>

@@ -51,6 +51,10 @@ export default function Career() {
     label: 'Select Department...',
   });
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const updateJobs = () => {
     let res = jobs;
 

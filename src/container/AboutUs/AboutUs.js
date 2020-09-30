@@ -4,8 +4,16 @@ import Footer from '../Footer/Footer';
 import classes from './AboutUs.module.css';
 import { p_color } from '../../constants';
 import OpeningText from '../../components/OpeningText';
+import { withRouter } from 'react-router-dom';
 
 class AboutUs extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+    // if (this.props.location.hash === '#about-approach') {
+    //   window.scrollTo(0, 1500);
+    // }
+  }
+
   render() {
     return (
       <div className={classes.root}>
@@ -41,7 +49,7 @@ class AboutUs extends Component {
             <img src='/images/about/1.jpeg' />
           </div>
 
-          <div className={classes.approach}>
+          <div className={classes.approach} id='about-approach'>
             <h1 className='heading'>Our approach</h1>
             <p className='para'>
               Trading in any asset class might include just one of these or may bring together
@@ -160,4 +168,4 @@ class AboutUs extends Component {
   }
 }
 
-export default AboutUs;
+export default withRouter(AboutUs);

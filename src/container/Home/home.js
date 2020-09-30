@@ -6,6 +6,10 @@ import About from '../../components/Home/About/About.js';
 import OpeningText from '../../components/OpeningText';
 
 class Home extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <>

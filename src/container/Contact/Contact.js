@@ -11,6 +11,10 @@ export default function Contact() {
   const [shanghai, setShanghai] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     let el = document.getElementById('address1');
     let plus = document.getElementById('plus1');
     let singapore_card = document.getElementsByClassName(classes.card)[0];
