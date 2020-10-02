@@ -21,7 +21,7 @@ export default function Contact() {
     if (singapore) {
       singapore_card.classList.add(classes.backdrop);
       el.style.height = '55px';
-      plus.style.transform = 'rotate(135deg)';
+      plus.style.transform = 'rotate(180deg)';
     } else {
       singapore_card.classList.remove(classes.backdrop);
       plus.style.transform = 'rotate(0)';
@@ -36,7 +36,7 @@ export default function Contact() {
     if (shanghai) {
       shanghai_card.classList.add(classes.backdrop);
       el.style.height = '55px';
-      plus.style.transform = 'rotate(135deg)';
+      plus.style.transform = 'rotate(180deg)';
     } else {
       shanghai_card.classList.remove(classes.backdrop);
       plus.style.transform = 'rotate(0)';
@@ -74,8 +74,8 @@ export default function Contact() {
                   Line3
                 </div>
               </div>
-              <div className={classes.toggle}>
-                <div id='plus1'>+</div>
+              <div className={`${classes.toggle}`}>
+                <div id='plus1'>^</div>
               </div>
             </div>
 
@@ -89,8 +89,8 @@ export default function Contact() {
                   Line3
                 </div>
               </div>
-              <div className={classes.toggle}>
-                <div id='plus2'>+</div>
+              <div className={`${classes.toggle}`}>
+                <div id='plus2'>^</div>
               </div>
             </div>
           </div>

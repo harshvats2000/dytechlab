@@ -141,12 +141,12 @@
     font-size: 32px;
   }
   .fun_card {
-    height: 400px;
+    height: 450px;
     overflow: hidden;
   }
   .fun_card > img {
     width: auto;
-    height: 100%;
+    height: 88%;
     min-width: 100%;
   }
   .fun_card1 {

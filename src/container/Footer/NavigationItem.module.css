@@ -19,10 +19,6 @@
   color: var(--p-color);
 }
 
-.navigationItem a.active {
-  color: var(--p-color);
-}
-
 @media only screen and (min-width: 900px) {
   .navigationItem {
     margin: 0 10px;

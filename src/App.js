@@ -6,6 +6,7 @@ import AboutUs from './container/AboutUs/AboutUs';
 import Culture from './container/Culture/Culture';
 import Career from './container/Careers/Career';
 import Contact from './container/Contact/Contact';
+import { TermsOfUse } from './container/TernsOfUse/TermsOfUse';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/culture' component={Culture} />
         <Route path='/careers' component={Career} />
         <Route path='/contact' component={Contact} />
+        <Route path='/terms-of-use' component={TermsOfUse} />
       </Switch>
     </div>
   );

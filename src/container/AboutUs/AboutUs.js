@@ -9,9 +9,6 @@ import { withRouter } from 'react-router-dom';
 class AboutUs extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
-    // if (this.props.location.hash === '#about-approach') {
-    //   window.scrollTo(0, 1500);
-    // }
   }
 
   render() {
@@ -38,21 +35,25 @@ class AboutUs extends Component {
         <div className={classes.body}>
           <div className={classes.history}>
             <h1 className='heading'>Our history</h1>
-            <p className='para'>
-              DRW was founded by Don Wilson, who got his start trading on the floor of the
-              Chicago Mercantile Exchange in the late 1980s. Every trader on the floor had a
-              three letter acronym for identification—Don chose his initials, DRW, and the name
-              stuck. Over the past 25 years, DRW has expanded globally while staying true to
-              what has always set us apart…our ability to identify and capture opportunities by
-              leveraging technology, research and risk management.
-            </p>
-            <img
-              src='/images/about/1.jpeg'
-              style={{ maxHeight: '400px', maxWidth: '500px', margin: 'auto' }}
-            />
+            <div className={classes.history_body}>
+              <p className='para'>
+                DRW was founded by Don Wilson, who got his start trading on the floor of the
+                Chicago Mercantile Exchange in the late 1980s. Every trader on the floor had a
+                three letter acronym for identification—Don chose his initials, DRW, and the
+                name stuck. Over the past 25 years, DRW has expanded globally while staying
+                true to what has always set us apart…our ability to identify and capture
+                opportunities by leveraging technology, research and risk management.
+              </p>
+              <img
+                src='/images/about/1.jpeg'
+                style={{ maxHeight: '400px', margin: 'auto', marginTop: '23px' }}
+              />
+            </div>
           </div>
 
-          <div className={classes.approach} id='about-approach'>
+          <div style={{ height: '1px', background: 'gainsboro', marginTop: '70px' }}></div>
+
+          <div className={classes.approach} id='about-approach' style={{ paddingTop: '40px' }}>
             <h1 className='heading'>Our approach</h1>
             <p className='para'>
               Trading in any asset class might include just one of these or may bring together
@@ -156,7 +157,7 @@ class AboutUs extends Component {
               hold back other organizations. Not many places do things like we do, and we like
               it that way.
             </p>
-            <img src='/images/about/trading.png' />
+            <img src='/images/about/trading.png' style={{ maxWidth: '700px' }} />
           </div>
         </div>
         <Footer />

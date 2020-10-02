@@ -100,6 +100,19 @@ export default function Culture() {
                   </p>
                 </div>
               </div>
+
+              <div className={classes.card}>
+                {/* <span className={`material-icons ${classes.icons}`}>school</span> */}
+                <div>
+                  <img src='/images/culture/winning.png' />
+                </div>
+                <div className={classes.card_body}>
+                  <h4>Winning</h4>
+                  <p className='para'>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, tenetur.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -110,48 +123,48 @@ export default function Culture() {
             </h1>
             <div className={classes.fun}>
               <div className={`${classes.fun_card} ${classes.fun_card1}`}>
-                <div className={classes.fun_card_title}>Movie Night</div>
                 <img alt='' src='/images/about/1.jpeg' />
+                <div className={classes.fun_card_title}>Movie Night</div>
               </div>
 
               <div className={`${classes.fun_card} ${classes.fun_card2}`}>
-                <div className={classes.fun_card_title}>pantry food</div>
                 <img alt='' src='/images/about/1.jpeg' />
+                <div className={classes.fun_card_title}>pantry food</div>
               </div>
 
               <div className={`${classes.fun_card} ${classes.fun_card3}`}>
-                <div className={classes.fun_card_title}>gym</div>
                 <img alt='' src='/images/about/1.jpeg' />
+                <div className={classes.fun_card_title}>gym</div>
               </div>
 
               <div className={`${classes.fun_card} ${classes.fun_card4}`}>
-                <div className={classes.fun_card_title}>friday snack</div>
                 <img alt='' src='/images/about/1.jpeg' />
+                <div className={classes.fun_card_title}>friday snack</div>
               </div>
 
               <div className={`${classes.fun_card} ${classes.fun_card5}`}>
-                <div className={classes.fun_card_title}>Game/poker</div>
                 <img alt='' src='/images/about/1.jpeg' />
+                <div className={classes.fun_card_title}>Game/poker</div>
               </div>
 
               <div className={`${classes.fun_card} ${classes.fun_card6}`}>
-                <div className={classes.fun_card_title}>jogging</div>
                 <img alt='' src='/images/about/1.jpeg' />
+                <div className={classes.fun_card_title}>jogging</div>
               </div>
 
               <div className={`${classes.fun_card} ${classes.fun_card7}`}>
-                <div className={classes.fun_card_title}>bbq/outing</div>
                 <img alt='' src='/images/about/1.jpeg' />
+                <div className={classes.fun_card_title}>bbq/outing</div>
               </div>
 
               <div className={`${classes.fun_card} ${classes.fun_card8}`}>
-                <div className={classes.fun_card_title}>annual treats</div>
                 <img alt='' src='/images/about/1.jpeg' />
+                <div className={classes.fun_card_title}>annual treats</div>
               </div>
 
               <div className={`${classes.fun_card} ${classes.fun_card9}`}>
-                <div className={classes.fun_card_title}>Marathon</div>
                 <img alt='' src='/images/about/1.jpeg' />
+                <div className={classes.fun_card_title}>Marathon</div>
               </div>
             </div>
           </div>

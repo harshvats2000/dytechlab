@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classes from './Footer.module.css';
 import NavigationItem from './NavigationItem';
+import { Link } from 'react-router-dom';
 
 class Footer extends Component {
   render() {
@@ -21,7 +22,7 @@ class Footer extends Component {
               © 2020 Dynamic Technology Lab Pte Ltd. All Rights Reserved.
             </div>
             <div className={classes.LegalNav}>
-              <a href='/'>Terms of Use</a>
+              <Link to='/terms-of-use'>Terms of Use</Link>
             </div>
           </div>
         </div>
