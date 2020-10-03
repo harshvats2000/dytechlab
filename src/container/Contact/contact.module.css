@@ -72,7 +72,7 @@
 
 .text {
   position: absolute;
-  bottom: 40px;
+  bottom: 50px;
   font-size: 1.6rem;
   color: white;
   left: 50%;
@@ -97,13 +97,13 @@
   z-index: 1;
   bottom: 0;
   padding: 8px 15px;
-  /* border: 1px solid white; */
   font-weight: bold;
   font-size: 1.5rem;
   color: white;
   left: 50%;
   transform: translateX(-50%);
   transition: 0.3s;
+  height: 16%;
 }
 
 .toggle > div {
@@ -147,5 +147,8 @@
   }
   .backdrop::after {
     height: 89%;
+  }
+  .toggle {
+    height: 11%;
   }
 }
