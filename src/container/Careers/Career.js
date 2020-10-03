@@ -103,6 +103,8 @@ export default function Career() {
   useEffect(() => {
     AOS.init();
     updateJobs();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location, department, type]);
 
   useEffect(() => {
@@ -111,7 +113,7 @@ export default function Career() {
 
   useEffect(() => {
     if (window.screen.width > 900) {
-      availableJobs.map((job) => {
+      availableJobs.forEach((job) => {
         let el = document.getElementById(`id${job.id}`);
         el.style.background = 'white';
       });
@@ -123,6 +125,8 @@ export default function Career() {
 
     let details_container = document.getElementById('sticky-scroll');
     if (details_container) details_container.scrollTo(0, 0); // Take user to starting when job is changed
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currJobId]);
 
   return (
@@ -131,7 +135,7 @@ export default function Career() {
         <Header />
 
         <div className={classes.banner}>
-          <img src='/images/about/2.jpeg' className={classes.img} />
+          <img src='/images/about/2.jpeg' alt='banner' className={classes.img} />
           <h1 className={classes.bannerTitle}>
             Where <span style={{ color: p_color }}>experience</span> <span>meets</span>{' '}
             innovation
@@ -232,19 +236,27 @@ export default function Career() {
                           >
                             <h4 className='heading'>Job Description</h4>
 
-                            <p style={{ textAlign: 'justify', whiteSpace: 'break-spaces' }}>
+                            <div
+                              style={{
+                                textAlign: 'justify',
+                                whiteSpace: 'break-spaces',
+                              }}
+                            >
                               {job.description}
-                            </p>
+                            </div>
 
                             <h4 className='heading'>Job Responsibilities</h4>
 
                             <div>
                               {job.responsibilities.map((resp, i) => (
-                                <div key={i}>
-                                  <img
-                                    src='/images/career/tick.svg'
-                                    className={classes.tick}
-                                  />
+                                <div
+                                  key={i}
+                                  style={{
+                                    textAlign: 'justify',
+                                    whiteSpace: 'break-spaces',
+                                  }}
+                                >
+                                  <span className={classes.dot}></span>
                                   {resp}
                                 </div>
                               ))}
@@ -254,11 +266,14 @@ export default function Career() {
 
                             <div>
                               {job.qualifications.map((qual, i) => (
-                                <div key={i}>
-                                  <img
-                                    src='/images/career/tick.svg'
-                                    className={classes.tick}
-                                  />
+                                <div
+                                  key={i}
+                                  style={{
+                                    textAlign: 'justify',
+                                    whiteSpace: 'break-spaces',
+                                  }}
+                                >
+                                  <span className={classes.dot}></span>
                                   {qual}
                                 </div>
                               ))}
@@ -268,11 +283,14 @@ export default function Career() {
 
                             <div>
                               {job.pluses.map((plus, i) => (
-                                <div key={i}>
-                                  <img
-                                    src='/images/career/tick.svg'
-                                    className={classes.tick}
-                                  />
+                                <div
+                                  key={i}
+                                  style={{
+                                    textAlign: 'justify',
+                                    whiteSpace: 'break-spaces',
+                                  }}
+                                >
+                                  <span className={classes.dot}></span>
                                   {plus}
                                 </div>
                               ))}
@@ -290,30 +308,29 @@ export default function Career() {
                       style={{
                         position: 'sticky',
                         top: '120px',
-                        height: '100vh',
                       }}
                     >
                       <div
                         id='sticky-scroll'
                         style={{
-                          height: '85vh',
-                          overflowY: 'scroll',
                           paddingRight: '20px',
+                          paddingLeft: '13px',
                         }}
                       >
-                        <h2 className='heading'>{currJob.name}</h2>
-                        <h3 className='heading'>Job Description</h3>
+                        <h2>{currJob.name}</h2>
+                        <h3>Job Description</h3>
 
                         <p
                           className='para'
                           style={{
                             lineHeight: '1.4',
+                            fontSize: '1rem',
                           }}
                         >
                           {currJob.description}
                         </p>
 
-                        <h3 className='heading'>Job Responsibilities</h3>
+                        <h3>Job Responsibilities</h3>
 
                         <div>
                           {currJob.responsibilities.map((resp, i) => (
@@ -321,16 +338,17 @@ export default function Career() {
                               className='para'
                               style={{
                                 lineHeight: '1.4',
+                                fontSize: '1rem',
                               }}
                               key={i}
                             >
-                              <img src='/images/career/tick.svg' className={classes.tick} />
+                              <span className={classes.dot}></span>
                               {resp}
                             </p>
                           ))}
                         </div>
 
-                        <h3 className='heading'>Qualifications</h3>
+                        <h3>Qualifications</h3>
 
                         <div>
                           {currJob.qualifications.map((qual, i) => (
@@ -339,15 +357,16 @@ export default function Career() {
                               key={i}
                               style={{
                                 lineHeight: '1.4',
+                                fontSize: '1rem',
                               }}
                             >
-                              <img src='/images/career/tick.svg' className={classes.tick} />
+                              <span className={classes.dot}></span>
                               {qual}
                             </p>
                           ))}
                         </div>
 
-                        <h3 className='heading'>Pluses</h3>
+                        <h3>Pluses</h3>
 
                         <div style={{ marginBottom: '20px' }}>
                           {currJob.pluses.map((plus, i) => (
@@ -356,9 +375,10 @@ export default function Career() {
                               key={i}
                               style={{
                                 lineHeight: '1.4',
+                                fontSize: '1rem',
                               }}
                             >
-                              <img src='/images/career/tick.svg' className={classes.tick} />
+                              <span className={classes.dot}></span>
                               {plus}
                             </p>
                           ))}

@@ -37,6 +37,17 @@
   font-family: 'futura-pt', sans-serif;
 }
 
+.dot {
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  background: #808080;
+  border-radius: 50%;
+  margin-left: -6px;
+  margin-bottom: 2px;
+  transform: translateX(-5px);
+}
+
 .container_right {
   display: none;
 }
@@ -167,6 +178,8 @@
     flex: 3;
     height: 85vh;
     overflow-y: scroll;
+    position: sticky;
+    top: 120px;
     /* scrollbar-width: none; */
   }
   .listing::-webkit-scrollbar {
