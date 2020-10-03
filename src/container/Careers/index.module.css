@@ -182,9 +182,6 @@
     top: 120px;
     /* scrollbar-width: none; */
   }
-  .listing::-webkit-scrollbar {
-    /* display: none; */
-  }
   .see_more {
     display: none;
   }
