@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classes from './index.module.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
@@ -7,6 +7,9 @@ import OpeningText from '../../components/OpeningText';
 import { Link } from 'react-router-dom';
 
 export const TermsOfUse = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className={classes.root}>
