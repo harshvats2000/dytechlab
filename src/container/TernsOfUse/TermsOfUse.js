@@ -15,17 +15,6 @@ export const TermsOfUse = () => {
       <div className={classes.root}>
         <Header />
 
-        <div className={classes.banner}>
-          <img src='/images/about/2.jpeg' className={classes.img} />
-          <h1 className={classes.bannerTitle}>
-            Where <span style={{ color: p_color }}>experience</span> <span>meets</span>{' '}
-            innovation
-            <p style={{ fontSize: '16px', fontWeight: 400 }}>
-              A results-driven team at the intersection of trading + technology
-            </p>
-          </h1>
-        </div>
-
         <OpeningText text='TERMS OF USE' />
 
         <div className={classes.body}>
