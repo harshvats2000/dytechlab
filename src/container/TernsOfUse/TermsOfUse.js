@@ -15,7 +15,9 @@ export const TermsOfUse = () => {
       <div className={classes.root}>
         <Header />
 
-        <OpeningText text='TERMS OF USE' />
+        <div className={classes.openingText}>
+          <OpeningText text='TERMS OF USE' />
+        </div>
 
         <div className={classes.body}>
           <p className='para' style={{ marginBottom: '50px' }}>

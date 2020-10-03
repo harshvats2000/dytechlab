@@ -5,9 +5,16 @@
   font-family: 'futura-pt', sans-serif;
 }
 
+.openingText {
+  margin-top: 220px;
+}
+
 @media only screen and (min-width: 900px) {
   .body {
     margin: 50px auto 20px auto;
     max-width: 1200px;
+  }
+  .openingText {
+    margin-top: 120px;
   }
 }
